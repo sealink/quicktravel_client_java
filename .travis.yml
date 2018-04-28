@@ -1,0 +1,21 @@
+language: java
+install: true
+jdk:
+- oraclejdk8
+script:
+- "./gradlew build"
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: bintray
+  file: descriptor.json
+  user: sealink
+  key:
+    secure: JXMAmbl8sShojwwl1DCKZFf126dOfpjupiIUR6EP1vL9cH0npP/tg/6N9qvwU+mFzySN+KtyBEEYsjkXDzuuEhOprEAl256YX+PzPTtgm/hPX7n+uq0YpsDoY+0gKGoKwf9lCdcRGV0Fo54tzGfvpv1LX/OuEPig+S8y3mtiVF4ru72nkd8WAdA4eMyQ1iGaD3JfcfPEwpsVh9FCxbJoTHAk7XboDXi3T/xK90pkI8Errb44VrSKTNGMwwU5sGrV8ypbst0lnJ/8q5xP9DYiK2+0bFTm+HjLFHYbnoP1lFx2MLB4shPWNKAHh8q8InKJ2WcIdqj7l6/bMO3qmYYzUk9UcurcIBxVfoys2BQMHShTlY1sC2hGvS1Yn2mtwP4TKJyt9Ldqj26DdK2JRbC3FqgYSYAqzx6asgUe2WHuyfKJ9bkR6RPDApLq1C092MzASkU5Y/VYT3hhLz0Y8K55i30/Lv/S5cUnCx5Wrlbeub4CALegyekUgv3bHPsMSoWisCxehtm//fjhlpvLVh7NK6sXb90R8Tp83fC5z9vBEl/M/6gDYiEMgyORC4RVtej5gCO06ktfm/HzuN/Atqif0ZzWln1cJrM2ayYwtmzZKDokWIbKvlxq3isRYNSta84L3KavjWvMNVf1nCqHXSFOpO+281LcYH6OAAN3rRyz5p4=
+  skip_cleanup: true
+  on: release

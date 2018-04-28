@@ -1,0 +1,50 @@
+package au.com.sealink.quicktravel.client.services;
+
+import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
+import au.com.sealink.quicktravel.client.models.barcodes.ConsumerSplitTicket;
+import au.com.sealink.quicktravel.client.models.barcodes.IssuedTicket;
+import au.com.sealink.quicktravel.client.models.barcodes.ReservationTicket;
+import au.com.sealink.quicktravel.client.models.barcodes.core.InvalidTicketException;
+import org.junit.Assert;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class TicketScannerTest {
+
+    @Test
+    public void scanReservationTicket() {
+        String json = FixtureHelper.fromFile("fixtures/reservation_barcode.json");
+        Object barcode = null;
+        try {
+            barcode = TicketScanner.fromJson(json);
+        } catch (InvalidTicketException e) {
+            Assert.fail("Unexpected exception");
+        }
+        assertTrue(barcode instanceof ReservationTicket);
+    }
+
+    @Test
+    public void scanIssuedTicket() {
+        String json = FixtureHelper.fromFile("fixtures/issued_ticket_barcode.json");
+        Object barcode = null;
+        try {
+            barcode = TicketScanner.fromJson(json);
+        } catch (InvalidTicketException e) {
+            Assert.fail("Unexpected exception");
+        }
+        assertTrue(barcode instanceof IssuedTicket);
+    }
+
+    @Test
+    public void scanConsumerSplitTicket() {
+        String json = FixtureHelper.fromFile("fixtures/consumer_split_barcode.json");
+        Object barcode = null;
+        try {
+            barcode = TicketScanner.fromJson(json);
+        } catch (InvalidTicketException e) {
+            Assert.fail("Unexpected exception");
+        }
+        assertTrue(barcode instanceof ConsumerSplitTicket);
+    }
+}

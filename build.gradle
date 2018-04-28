@@ -1,16 +1,27 @@
-group 'sealink'
-version '1.0-SNAPSHOT'
+plugins {
+    id 'java-library'
+    id 'net.nemerosa.versioning' version '2.0.0'
+}
 
-apply plugin: 'java'
+group 'au.com.sealink.quicktravel.client'
 
 sourceCompatibility = 1.8
+version = versioning.info.full
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'net.danlew:android.joda:2.9.5'
+    testImplementation 'joda-time:joda-time:2.9.4.2'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                   'Implementation-Version': project.version)
+    }
 }

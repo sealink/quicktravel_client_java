@@ -5,6 +5,7 @@ import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.core.ActivationTrigger;
 import au.com.sealink.quicktravel.client.models.barcodes.core.TicketTemplate;
 import com.google.gson.Gson;
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,5 +30,33 @@ public class IssuedTicketTest {
         Assert.assertEquals(null, template.getDailyUsesLimit());
 
         assertEquals(1, (int)actual.getPassengers().get("Adult"));
+
+        Assert.assertFalse(actual.isActive());
+    }
+
+    @Test
+    public void isActive() {
+        TicketTemplate template = new TicketTemplate();
+        template.setValidityDurationMinutes(20);
+
+        IssuedTicket ticket = new IssuedTicket();
+        ticket.setTicketTemplate(template);
+
+        ticket.setLastUsedAt(DateTime.now().toDate());
+
+        Assert.assertTrue(ticket.isActive());
+    }
+
+    @Test
+    public void isExpired() {
+        TicketTemplate template = new TicketTemplate();
+        template.setValidityDurationMinutes(20);
+
+        IssuedTicket ticket = new IssuedTicket();
+        ticket.setTicketTemplate(template);
+
+        ticket.setLastUsedAt(DateTime.now().minusMinutes(21).toDate());
+
+        Assert.assertFalse(ticket.isActive());
     }
 }

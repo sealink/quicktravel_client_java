@@ -16,6 +16,19 @@
     "name": "Rottnest Island Gift Voucher - Different Day Return"
   },
   "vehicles": [
+    {
+      "id": 257194,
+      "type": {
+        "id": 10,
+        "name": "Luggage  (no larger than 800mm x 500mm x 400mm)"
+      },
+      "length": "1.0",
+      "width": null,
+      "height": "0.1",
+      "details": null,
+      "cargo": null,
+      "registration": null
+    }
   ],
   "passengers": [
     {

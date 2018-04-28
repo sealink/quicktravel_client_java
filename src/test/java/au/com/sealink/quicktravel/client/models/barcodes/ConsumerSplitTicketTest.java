@@ -3,19 +3,22 @@ package au.com.sealink.quicktravel.client.models.barcodes;
 import au.com.sealink.quicktravel.client.helpers.DateHelper;
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.core.Passenger;
+import au.com.sealink.quicktravel.client.models.barcodes.core.Vehicle;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Calendar;
 
 import static org.junit.Assert.*;
 
-public class ConsumerSplitTest {
+public class ConsumerSplitTicketTest {
 
     @Test
     public void fromJson() {
         String json = FixtureHelper.fromFile("fixtures/consumer_split_barcode.json");
-        ConsumerSplit actual = new Gson().fromJson(json, ConsumerSplit.class);
+        ConsumerSplitTicket actual = new Gson().fromJson(json, ConsumerSplitTicket.class);
 
         assertEquals(9, actual.getId());
 
@@ -40,5 +43,24 @@ public class ConsumerSplitTest {
 
         assertEquals("Adult", passenger.getConsumerType().getName());
         assertEquals(1, passenger.getConsumerType().getId());
+
+        assertEquals(1, actual.getVehicles().size());
+
+        Vehicle vehicle = actual.getVehicles().get(0);
+        assertEquals(257194, vehicle.getId());
+
+        assertEquals("Luggage  (no larger than 800mm x 500mm x 400mm)", vehicle.getConsumerType().getName());
+        assertEquals(10, vehicle.getConsumerType().getId());
+
+        assertEquals(1.0f, vehicle.getLength(), 0.001);
+        Assert.assertNull(vehicle.getWidth());
+        assertEquals(0.1f, vehicle.getHeight(), 0.001);
+
+        Assert.assertNull(vehicle.getDetails());
+        Assert.assertNull(vehicle.getCargo());
+        Assert.assertNull(vehicle.getRegistration());
+
+        Assert.assertTrue(actual.isActive());
+        Assert.assertNull(actual.getLastUsedAt());
     }
 }

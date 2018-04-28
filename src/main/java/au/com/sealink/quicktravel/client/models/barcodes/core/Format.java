@@ -4,9 +4,20 @@ import com.google.gson.annotations.SerializedName;
 
 public enum Format {
     @SerializedName("0")
-    ConsumerSplit,
+    ConsumerSplit(0),
     @SerializedName("1")
-    Reservation,
+    Reservation(1),
     @SerializedName("2")
-    IssuedTicket
+    IssuedTicket(2);
+
+    private final int value;
+
+    Format(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
 }

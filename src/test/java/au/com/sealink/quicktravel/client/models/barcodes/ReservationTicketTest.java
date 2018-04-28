@@ -4,6 +4,7 @@ import au.com.sealink.quicktravel.client.helpers.DateHelper;
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
 import com.google.gson.Gson;
+import org.junit.Assert;
 import org.junit.Test;
 import java.util.Calendar;
 
@@ -11,11 +12,11 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class ReservationTest {
+public class ReservationTicketTest {
     @Test
     public void fromJson() {
         String json = FixtureHelper.fromFile("fixtures/reservation_barcode.json");
-        Reservation actual = new Gson().fromJson(json, Reservation.class);
+        ReservationTicket actual = new Gson().fromJson(json, ReservationTicket.class);
 
         assertEquals(172_931, actual.getId());
         assertEquals(Format.Reservation, actual.getFormat());
@@ -38,5 +39,7 @@ public class ReservationTest {
         assertEquals(new Integer(35), actual.getReservation().getTripId());
         assertEquals(DateHelper.getDate(2018, Calendar.APRIL, 17), actual.getReservation().getDepartureDate());
         assertEquals("0910", actual.getReservation().getDepartureTime());
+        Assert.assertTrue(actual.isActive());
+        Assert.assertNull(actual.getLastUsedAt());
     }
 }

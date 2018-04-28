@@ -6,9 +6,10 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public class Base {
+public class BaseTicket implements ITicket {
     @SerializedName("id")
     @Expose
     private int id;
@@ -85,5 +86,20 @@ public class Base {
 
     public void setTodoItems(List<String> todoItems) {
         this.todoItems = todoItems;
+    }
+
+    @Override
+    public boolean isActive() {
+        return true;
+    }
+
+    @Override
+    public Date getLastUsedAt() {
+        return null;
+    }
+
+    @Override
+    public void setLastUsedAt(Date lastUsedAt) {
+
     }
 }

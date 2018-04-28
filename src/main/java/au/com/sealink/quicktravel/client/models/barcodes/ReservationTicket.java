@@ -4,7 +4,7 @@ import au.com.sealink.quicktravel.client.models.barcodes.core.ConsumerTypeCount;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Reservation extends Base {
+public class ReservationTicket extends BaseTicket {
 
     @SerializedName("passenger_first_name")
     @Expose

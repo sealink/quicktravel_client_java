@@ -1,0 +1,36 @@
+{
+  "reference": "T2GPQ2H",
+  "format": 2,
+  "last_used_at": "2018-04-11T19:23:06+10:00",
+  "resource": {
+    "id": 630,
+    "name": "LaneC-City 365-Day 15-Trips"
+  },
+  "reservation": {
+    "id": 1481832,
+    "booking_id": 1202566,
+    "trip_id": null,
+    "route_id": null,
+    "service_id": 571029,
+    "departure_time": null,
+    "departure_date": "2018-04-11"
+  },
+  "passengers": {
+    "Adult": 1
+  },
+  "vehicles": {
+
+  },
+  "ticket_template": {
+    "name": "LaneC-City 365-Day 15-Trips",
+    "activation_trigger": "first_use",
+    "expiry_days": 365,
+    "maximum_uses": 15,
+    "validity_duration_minutes": 20,
+    "daily_uses_limit": null
+  },
+  "requires_review": false,
+  "todo_items": [
+
+  ]
+}

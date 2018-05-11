@@ -46,6 +46,7 @@ captures/
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
 .idea/caches
+.idea/uiDesigner.xml
 
 # Max Files
 .DS_Store

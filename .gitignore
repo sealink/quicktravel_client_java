@@ -47,6 +47,7 @@ captures/
 .idea/vcs.xml
 .idea/caches
 .idea/uiDesigner.xml
+.idea/kotlinc.xml
 
 # Max Files
 .DS_Store

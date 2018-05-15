@@ -23,6 +23,7 @@ public class TicketTemplate {
     @Expose
     private Integer dailyUsesLimit;
 
+    //region GETTER/SETTERS
     public String getName() {
         return name;
     }
@@ -70,5 +71,6 @@ public class TicketTemplate {
     public void setDailyUsesLimit(Integer dailyUsesLimit) {
         this.dailyUsesLimit = dailyUsesLimit;
     }
+    //endregion
 }
 

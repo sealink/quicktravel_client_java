@@ -17,6 +17,7 @@ public class ConsumerSplitTicket extends BaseTicket {
     @Expose
     private List<Passenger> passengers = new ArrayList<Passenger>();
 
+    //region GETTER/SETTERS
     public List<Vehicle> getVehicles() {
         return vehicles;
     }
@@ -32,4 +33,5 @@ public class ConsumerSplitTicket extends BaseTicket {
     public void setPassengers(List<Passenger> passengers) {
         this.passengers = passengers;
     }
+    //endregion
 }

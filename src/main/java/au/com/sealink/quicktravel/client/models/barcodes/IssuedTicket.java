@@ -21,6 +21,7 @@ public class IssuedTicket extends BaseTicket {
     @Expose
     private ConsumerTypeCount vehicles;
 
+    //region GETTERS/SETTERS
     public Date getLastUsedAt() {
         return lastUsedAt;
     }
@@ -52,6 +53,7 @@ public class IssuedTicket extends BaseTicket {
     public void setVehicles(ConsumerTypeCount vehicles) {
         this.vehicles = vehicles;
     }
+    //endregion
 
     @Override
     public boolean isActive() {

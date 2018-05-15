@@ -73,6 +73,7 @@ public class VehicleType {
     @Expose
     private Boolean requireDropOffLocation;
 
+    //region GETTER/SETTERS
     public Integer getId() {
         return id;
     }
@@ -248,4 +249,5 @@ public class VehicleType {
     public void setRequireDropOffLocation(Boolean requireDropOffLocation) {
         this.requireDropOffLocation = requireDropOffLocation;
     }
+    //endregion
 }

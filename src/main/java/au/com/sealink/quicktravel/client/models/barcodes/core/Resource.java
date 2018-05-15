@@ -11,6 +11,7 @@ public class Resource {
     @Expose
     private String name;
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -26,4 +27,5 @@ public class Resource {
     public void setName(String name) {
         this.name = name;
     }
+    //endregion
 }

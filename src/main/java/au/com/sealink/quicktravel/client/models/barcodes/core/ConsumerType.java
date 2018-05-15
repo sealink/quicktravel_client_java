@@ -11,6 +11,7 @@ public class ConsumerType {
     @Expose
     private String name;
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -26,4 +27,5 @@ public class ConsumerType {
     public void setName(String name) {
         this.name = name;
     }
+    //endregion
 }

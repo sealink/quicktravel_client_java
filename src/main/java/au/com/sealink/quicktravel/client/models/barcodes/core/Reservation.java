@@ -28,6 +28,7 @@ public class Reservation {
     @Expose
     private Date departureDate;
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -83,4 +84,5 @@ public class Reservation {
     public void setDepartureDate(Date departureDate) {
         this.departureDate = departureDate;
     }
+    //endregion
 }

@@ -29,6 +29,7 @@ public class Vehicle {
     @Expose
     private String registration;
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -92,4 +93,5 @@ public class Vehicle {
     public void setRegistration(String registration) {
         this.registration = registration;
     }
+    //endregion
 }

@@ -43,6 +43,7 @@ public class PassengerType {
     @Expose
     private Boolean requiresReview;
 
+    //region GETTER/SETTERS
     public Integer getId() {
         return id;
     }
@@ -138,4 +139,5 @@ public class PassengerType {
     public void setRequiresReview(Boolean requiresReview) {
         this.requiresReview = requiresReview;
     }
+    //endregion
 }

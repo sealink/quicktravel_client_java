@@ -15,6 +15,7 @@ public class Passenger {
     @Expose
     private ConsumerType type;
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -38,4 +39,5 @@ public class Passenger {
     public void setConsumerType(ConsumerType type) {
         this.type = type;
     }
+    //endregion
 }

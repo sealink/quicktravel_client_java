@@ -16,6 +16,7 @@ public class ReservationTicket extends BaseTicket {
     @Expose
     private ConsumerTypeCount vehicles;
 
+    //region GETTERS/SETTERS
     public String getPassengerFirstName() {
         return passengerFirstName;
     }
@@ -39,4 +40,5 @@ public class ReservationTicket extends BaseTicket {
     public void setVehicles(ConsumerTypeCount vehicles) {
         this.vehicles = vehicles;
     }
+    //endregion
 }

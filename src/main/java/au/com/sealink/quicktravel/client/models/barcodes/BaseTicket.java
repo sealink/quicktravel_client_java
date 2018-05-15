@@ -33,6 +33,7 @@ public class BaseTicket implements ITicket {
     @Expose
     private List<String> todoItems = new ArrayList<>();
 
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -101,6 +102,6 @@ public class BaseTicket implements ITicket {
 
     @Override
     public void setLastUsedAt(Date lastUsedAt) {
-
     }
+    //endregion
 }

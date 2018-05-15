@@ -25,7 +25,7 @@ public class BaseTicket implements ITicket {
     private Resource resource;
     @SerializedName("reservation")
     @Expose
-    private au.com.sealink.quicktravel.client.models.barcodes.core.Reservation reservation;
+    private Reservation reservation;
     @SerializedName("requires_review")
     @Expose
     private boolean requiresReview;

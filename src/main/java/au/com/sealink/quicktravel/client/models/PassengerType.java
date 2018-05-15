@@ -14,10 +14,10 @@ public class PassengerType {
     private String name;
     @SerializedName("minimum_age")
     @Expose
-    private Object minimumAge;
+    private Integer minimumAge;
     @SerializedName("maximum_age")
     @Expose
-    private Object maximumAge;
+    private Integer maximumAge;
     @SerializedName("age_range_required")
     @Expose
     private Boolean ageRangeRequired;
@@ -60,19 +60,19 @@ public class PassengerType {
         this.name = name;
     }
 
-    public Object getMinimumAge() {
+    public Integer getMinimumAge() {
         return minimumAge;
     }
 
-    public void setMinimumAge(Object minimumAge) {
+    public void setMinimumAge(Integer minimumAge) {
         this.minimumAge = minimumAge;
     }
 
-    public Object getMaximumAge() {
+    public Integer getMaximumAge() {
         return maximumAge;
     }
 
-    public void setMaximumAge(Object maximumAge) {
+    public void setMaximumAge(Integer maximumAge) {
         this.maximumAge = maximumAge;
     }
 

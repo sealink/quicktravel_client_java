@@ -11,7 +11,7 @@ public class VehicleType {
     private Integer id;
     @SerializedName("minimum_length")
     @Expose
-    private Object minimumLength;
+    private Float minimumLength;
     @SerializedName("fixed_length")
     @Expose
     private Boolean fixedLength;
@@ -23,13 +23,13 @@ public class VehicleType {
     private String description;
     @SerializedName("default")
     @Expose
-    private Boolean _default;
+    private Boolean defaultType;
     @SerializedName("trailer")
     @Expose
     private Boolean trailer;
     @SerializedName("maximum_length")
     @Expose
-    private Object maximumLength;
+    private Float maximumLength;
     @SerializedName("position")
     @Expose
     private Integer position;
@@ -38,7 +38,7 @@ public class VehicleType {
     private Boolean fixedWeight;
     @SerializedName("default_weight")
     @Expose
-    private String defaultWeight;
+    private Float defaultWeight;
     @SerializedName("detail_prompt")
     @Expose
     private String detailPrompt;
@@ -62,13 +62,13 @@ public class VehicleType {
     private Boolean multiplyLength;
     @SerializedName("default_length")
     @Expose
-    private String defaultLength;
+    private Float defaultLength;
     @SerializedName("fixed_height")
     @Expose
     private Boolean fixedHeight;
     @SerializedName("default_height")
     @Expose
-    private String defaultHeight;
+    private Float defaultHeight;
     @SerializedName("require_drop_off_location")
     @Expose
     private Boolean requireDropOffLocation;
@@ -82,11 +82,11 @@ public class VehicleType {
         this.id = id;
     }
 
-    public Object getMinimumLength() {
+    public Float getMinimumLength() {
         return minimumLength;
     }
 
-    public void setMinimumLength(Object minimumLength) {
+    public void setMinimumLength(Float minimumLength) {
         this.minimumLength = minimumLength;
     }
 
@@ -115,11 +115,11 @@ public class VehicleType {
     }
 
     public Boolean getDefault() {
-        return _default;
+        return defaultType;
     }
 
-    public void setDefault(Boolean _default) {
-        this._default = _default;
+    public void setDefault(Boolean defaultType) {
+        this.defaultType = defaultType;
     }
 
     public Boolean getTrailer() {
@@ -130,11 +130,11 @@ public class VehicleType {
         this.trailer = trailer;
     }
 
-    public Object getMaximumLength() {
+    public Float getMaximumLength() {
         return maximumLength;
     }
 
-    public void setMaximumLength(Object maximumLength) {
+    public void setMaximumLength(Float maximumLength) {
         this.maximumLength = maximumLength;
     }
 
@@ -154,11 +154,11 @@ public class VehicleType {
         this.fixedWeight = fixedWeight;
     }
 
-    public String getDefaultWeight() {
+    public Float getDefaultWeight() {
         return defaultWeight;
     }
 
-    public void setDefaultWeight(String defaultWeight) {
+    public void setDefaultWeight(Float defaultWeight) {
         this.defaultWeight = defaultWeight;
     }
 
@@ -218,11 +218,11 @@ public class VehicleType {
         this.multiplyLength = multiplyLength;
     }
 
-    public String getDefaultLength() {
+    public Float getDefaultLength() {
         return defaultLength;
     }
 
-    public void setDefaultLength(String defaultLength) {
+    public void setDefaultLength(Float defaultLength) {
         this.defaultLength = defaultLength;
     }
 
@@ -234,11 +234,11 @@ public class VehicleType {
         this.fixedHeight = fixedHeight;
     }
 
-    public String getDefaultHeight() {
+    public Float getDefaultHeight() {
         return defaultHeight;
     }
 
-    public void setDefaultHeight(String defaultHeight) {
+    public void setDefaultHeight(Float defaultHeight) {
         this.defaultHeight = defaultHeight;
     }
 

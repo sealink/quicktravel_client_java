@@ -2,6 +2,7 @@ package au.com.sealink.quicktravel.client.models.barcodes;
 
 import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
 import au.com.sealink.quicktravel.client.models.barcodes.core.Resource;
+import au.com.sealink.quicktravel.client.models.barcodes.core.Reservation;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -64,11 +65,11 @@ public class BaseTicket implements ITicket {
         this.resource = resource;
     }
 
-    public au.com.sealink.quicktravel.client.models.barcodes.core.Reservation getReservation() {
+    public Reservation getReservation() {
         return reservation;
     }
 
-    public void setReservation(au.com.sealink.quicktravel.client.models.barcodes.core.Reservation reservation) {
+    public void setReservation(Reservation reservation) {
         this.reservation = reservation;
     }
 

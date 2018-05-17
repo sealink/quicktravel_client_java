@@ -1,8 +1,8 @@
 package au.com.sealink.quicktravel.client.models.barcodes;
 
 import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
-import au.com.sealink.quicktravel.client.models.barcodes.core.Resource;
 import au.com.sealink.quicktravel.client.models.barcodes.core.Reservation;
+import au.com.sealink.quicktravel.client.models.barcodes.core.Resource;
 
 import java.util.Date;
 import java.util.List;

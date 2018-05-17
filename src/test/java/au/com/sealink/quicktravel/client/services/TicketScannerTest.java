@@ -1,5 +1,7 @@
 package au.com.sealink.quicktravel.client.services;
 
+import static org.junit.Assert.assertTrue;
+
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.ConsumerSplitTicket;
 import au.com.sealink.quicktravel.client.models.barcodes.IssuedTicket;
@@ -7,8 +9,6 @@ import au.com.sealink.quicktravel.client.models.barcodes.ReservationTicket;
 import au.com.sealink.quicktravel.client.models.barcodes.core.InvalidTicketException;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TicketScannerTest {
 

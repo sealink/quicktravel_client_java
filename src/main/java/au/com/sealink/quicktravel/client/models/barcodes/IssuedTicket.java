@@ -1,10 +1,10 @@
 package au.com.sealink.quicktravel.client.models.barcodes;
 
-import java.util.Date;
 import au.com.sealink.quicktravel.client.models.barcodes.core.ConsumerTypeCount;
 import au.com.sealink.quicktravel.client.models.barcodes.core.TicketTemplate;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.Date;
 import org.joda.time.DateTime;
 
 public class IssuedTicket extends BaseTicket {

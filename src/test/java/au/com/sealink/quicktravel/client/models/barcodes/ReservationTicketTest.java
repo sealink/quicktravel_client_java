@@ -1,16 +1,18 @@
 package au.com.sealink.quicktravel.client.models.barcodes;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 import au.com.sealink.quicktravel.client.helpers.DateHelper;
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
 import com.google.gson.Gson;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.Test;
-import java.util.Calendar;
-
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class ReservationTicketTest {
     @Test
@@ -37,7 +39,8 @@ public class ReservationTicketTest {
         assertEquals(new Integer(1), actual.getReservation().getRouteId());
         assertEquals(new Integer(7673), actual.getReservation().getServiceId());
         assertEquals(new Integer(35), actual.getReservation().getTripId());
-        assertEquals(DateHelper.getDate(2018, Calendar.APRIL, 17), actual.getReservation().getDepartureDate());
+        Date expected = DateHelper.getDate(2018, Calendar.APRIL, 17);
+        assertEquals(expected, actual.getReservation().getDepartureDate());
         assertEquals("0910", actual.getReservation().getDepartureTime());
         Assert.assertTrue(actual.isActive());
         Assert.assertNull(actual.getLastUsedAt());

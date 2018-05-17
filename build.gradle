@@ -3,11 +3,16 @@ plugins {
     id 'net.nemerosa.versioning' version '2.0.0'
     id 'nebula.lint' version '9.3.1'
 }
+apply plugin: 'checkstyle'
 
 group 'au.com.sealink.quicktravel.client'
 
 sourceCompatibility = 1.8
 version = versioning.info.full
+
+checkstyle {
+    toolVersion = '8.1'
+}
 
 gradleLint {
     rules  = ['dependency-parentheses', 'dependency-tuple']
@@ -32,3 +37,4 @@ jar {
                    'Implementation-Version': project.version)
     }
 }
+

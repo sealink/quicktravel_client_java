@@ -1,15 +1,16 @@
 package au.com.sealink.quicktravel.client.models.barcodes;
 
+import static org.junit.Assert.assertEquals;
+
 import au.com.sealink.quicktravel.client.helpers.DateHelper;
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.core.ActivationTrigger;
 import au.com.sealink.quicktravel.client.models.barcodes.core.TicketTemplate;
 import com.google.gson.Gson;
+import java.util.Date;
 import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class IssuedTicketTest {
 
@@ -19,7 +20,8 @@ public class IssuedTicketTest {
         IssuedTicket actual = new Gson().fromJson(json, IssuedTicket.class);
 
         Assert.assertEquals("T2GPQ2H", actual.getReference());
-        Assert.assertEquals(DateHelper.parseIso("2018-04-11T19:23:06+10:00"), actual.getLastUsedAt());
+        Date expected = DateHelper.parseIso("2018-04-11T19:23:06+10:00");
+        Assert.assertEquals(expected, actual.getLastUsedAt());
 
         TicketTemplate template = actual.getTicketTemplate();
         Assert.assertEquals(ActivationTrigger.FirstUse, template.getActivationTrigger());

@@ -15,8 +15,9 @@ public class TicketScanner {
                     return new Gson().fromJson(json, ReservationTicket.class);
                 case IssuedTicket:
                     return new Gson().fromJson(json, IssuedTicket.class);
+                default:
+                    throw new InvalidTicketException("Unknown ticket format");
             }
-            return null;
         } catch (com.google.gson.JsonSyntaxException e) {
             throw new InvalidTicketException("Invalid ticket format", e);
         }

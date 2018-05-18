@@ -2,11 +2,14 @@ plugins {
     id 'java-library'
     id 'net.nemerosa.versioning' version '2.0.0'
     id 'nebula.lint' version '9.3.1'
+    id 'net.saliman.cobertura' version '2.3.1'
+    id 'com.github.kt3k.coveralls' version '2.8.2'
 }
 apply plugin: 'checkstyle'
 
 group 'au.com.sealink.quicktravel.client'
 
+cobertura.coverageFormats = ['html', 'xml']
 sourceCompatibility = 1.8
 version = versioning.info.full
 

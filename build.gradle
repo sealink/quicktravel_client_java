@@ -2,10 +2,19 @@ plugins {
     id 'java-library'
     id 'net.nemerosa.versioning' version '2.0.0'
     id 'nebula.lint' version '9.3.1'
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
 }
 apply plugin: 'checkstyle'
 
 group 'au.com.sealink.quicktravel.client'
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
 
 sourceCompatibility = 1.8
 version = versioning.info.full

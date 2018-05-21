@@ -1,0 +1,1 @@
+[![Coverage Status](https://coveralls.io/repos/github/sealink/quicktravel_client_java/badge.svg?branch=master)](https://coveralls.io/github/sealink/quicktravel_client_java?branch=master)

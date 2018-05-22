@@ -1,1 +1,48 @@
+ [ ![Download](https://api.bintray.com/packages/sealink/maven/quicktravel_client/images/download.svg) ](https://bintray.com/sealink/maven/quicktravel_client/_latestVersion) 
 [![Coverage Status](https://coveralls.io/repos/github/sealink/quicktravel_client_java/badge.svg?branch=master)](https://coveralls.io/github/sealink/quicktravel_client_java?branch=master)
+[![Build Status](https://travis-ci.org/sealink/quicktravel_client_java.svg?branch=master)](https://travis-ci.org/sealink/quicktravel_client_java)
+
+
+QuickTravel API library is a common use library developed primarly for use in the SeaLink Android 
+application suite, including Ticketing, Companion and Albert.
+
+
+#### Deployment
+
+Deployment is handled via gradle and travis if you follow the correct git conventions.
+
+If you are creating a new minor or major release than you would do the following.
+
+* Create a new release branch, based upon the major and min
+ ```concept
+git checkout -b release/0.1
+```
+* Update the changelog with the correct version number (in this case 0.1.0)
+
+```concept
+git commit -m "Release 0.1.0"
+git tag 0.1.0
+git push origin master --tags
+```
+
+A point release would simply be a tag on this branch and you would follow the previous procedure.
+
+
+#### Project Builds and Structure
+
+* Gradle is the build tool of choice and all things related are contained within the project.
+ 
+ Some example build tasks include
+ 
+ ```concept
+./gradlew build
+./gradlew test
+./gradlew versionInfo
+```
+
+* Project is maven compatible however we only publish to Bintray so you will need to manually configure
+  the repository, full instructions can be found at the following site
+  https://bintray.com/sealink/maven/quicktravel_client
+* TravisCI is used to test / build and publish new versions.
+* JUnit is used for integration and unit level testing.
+

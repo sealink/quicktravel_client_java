@@ -1,10 +1,13 @@
 plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+    id "maven-publish"
     id 'java-library'
-    id 'net.nemerosa.versioning' version '2.0.0'
+    id 'net.nemerosa.versioning' version '2.6.1'
     id 'nebula.lint' version '9.3.1'
     id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.6.3'
 }
+
 apply plugin: 'checkstyle'
 
 group 'au.com.sealink.quicktravel.client'
@@ -16,8 +19,12 @@ jacocoTestReport {
     }
 }
 
+versioning {
+    branchEnv = ['TRAVIS_BRANCH', 'TRAVIS_TAG', 'TRAVIS_PULL_REQUEST_BRANCH', 'GIT_BRANCH']
+}
+
 sourceCompatibility = 1.8
-version = versioning.info.full
+version = versioning.info.tag || versioning.info.display
 
 checkstyle {
     toolVersion = '8.1'
@@ -40,10 +47,74 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-jar {
-    manifest {
-        attributes('Implementation-Title': project.name,
-                   'Implementation-Version': project.version)
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+def pomConfig = {
+    licenses {
+        license {
+            name "MIT License"
+            url "http://www.opensource.org/licenses/mit-license.php"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "jmortlock"
+            name "John Mortlock"
+            email "john.mortlock@sealink.com.au"
+        }
+    }
+
+    scm {
+        url "https://github.com/sealink/quicktravel_client_java.git"
     }
 }
 
+publishing {
+    publications {
+        mavenPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar {
+                classifier "sources"
+            }
+            groupId 'au.com.sealink.quicktravel.client'
+            artifactId 'quicktravel_client'
+            version project.version
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'QuickTravel Java Bindings')
+                root.appendNode('name', 'QuickTravel Client')
+                root.appendNode('url', 'https://github.com/sealink/quicktravel_client_java')
+                root.children().last() + pomConfig
+            }
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+
+    publications = ['mavenPublication']
+
+    pkg {
+        repo = 'maven'
+        name = 'quicktravel_client'
+        userOrg = 'sealink'
+        licenses = ['MIT']
+        vcsUrl = "https://github.com/sealink/quicktravel_client_java.git"
+        version {
+            name = project.version
+            desc = project.version
+            released  = new Date()
+        }
+    }
+    publish = true
+}

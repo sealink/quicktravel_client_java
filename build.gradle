@@ -20,11 +20,11 @@ jacocoTestReport {
 }
 
 versioning {
-    branchEnv = ['TRAVIS_BRANCH', 'TRAVIS_TAG', 'TRAVIS_PULL_REQUEST_BRANCH']
+    branchEnv = ['TRAVIS_BRANCH', 'TRAVIS_TAG', 'TRAVIS_PULL_REQUEST_BRANCH', 'GIT_BRANCH']
 }
 
 sourceCompatibility = 1.8
-version = versioning.info.tag
+version = versioning.info.tag || versioning.info.display
 
 checkstyle {
     toolVersion = '8.1'
@@ -86,7 +86,7 @@ publishing {
             }
             groupId 'au.com.sealink.quicktravel.client'
             artifactId 'quicktravel_client'
-            version versioning.info.tag
+            version project.version
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'QuickTravel Java Bindings')
@@ -112,7 +112,7 @@ bintray {
         vcsUrl = "https://github.com/sealink/quicktravel_client_java.git"
         version {
             name = project.version
-            desc = versioning.info.tag
+            desc = project.version
             released  = new Date()
         }
     }

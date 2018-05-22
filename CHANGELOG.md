@@ -1,5 +1,7 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
 ## 0.1.0
 
 * [TT-3952] Add barcode scanning support

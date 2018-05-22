@@ -25,10 +25,10 @@ versioning {
 
 sourceCompatibility = 1.8
 if(versioning.info.tag == null) {
-    versioning.info.display
+    version = versioning.info.display
 }
 else {
-    versioning.info.tag
+    version = versioning.info.tag
 }
 
 

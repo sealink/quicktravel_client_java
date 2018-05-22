@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.1.0
 
 * [TT-3952] Add barcode scanning support
 * [TT-4022] Add checkstyle and gradle build linting checks

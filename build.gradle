@@ -24,7 +24,13 @@ versioning {
 }
 
 sourceCompatibility = 1.8
-version = versioning.info.tag || versioning.info.display
+if(versioning.info.tag == null) {
+    versioning.info.display
+}
+else {
+    versioning.info.tag
+}
+
 
 checkstyle {
     toolVersion = '8.1'

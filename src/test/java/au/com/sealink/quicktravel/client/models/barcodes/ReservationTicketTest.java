@@ -15,6 +15,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ReservationTicketTest {
+
+    @Test
+    public void withoutTodoItems() {
+        String json = FixtureHelper.fromFile("fixtures/reservation_barcode_without_todo.json");
+        ReservationTicket actual = new Gson().fromJson(json, ReservationTicket.class);
+        assertEquals(0, actual.getTodoItems().size());
+    }
+
     @Test
     public void fromJson() {
         String json = FixtureHelper.fromFile("fixtures/reservation_barcode.json");

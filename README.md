@@ -48,7 +48,7 @@ A point release would simply be a tag on this branch and you would follow the pr
 
 #### Development
 
-If you want to use this library directly in an Android Studio project, you changes
+If you want to use this library directly in an Android Studio project, you can
 make the following changes to the gradle build
 
 Edit ```settings.gradle``` and create a new project dependency.

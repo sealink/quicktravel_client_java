@@ -1,13 +1,11 @@
 package au.com.sealink.quicktravel.client.models;
 
-import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
-import com.google.gson.Gson;
-import org.junit.Test;
-
-import java.util.ArrayList;
-
 import static junit.framework.TestCase.assertEquals;
 
+import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
+import com.google.gson.Gson;
+import java.util.ArrayList;
+import org.junit.Test;
 
 public class BoardResultTest {
     private void assertData(BoardResult actual) {

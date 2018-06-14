@@ -1,10 +1,8 @@
 package au.com.sealink.quicktravel.client.models;
 
+import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
-
 
 public class BoardRequestTest {
     @Test
@@ -12,7 +10,7 @@ public class BoardRequestTest {
         ServerScan scanA = new ServerScan();
         ServerScan scanB = new ServerScan();
 
-        ArrayList<ServerScan>list =new ArrayList<>();
+        ArrayList<ServerScan> list = new ArrayList<>();
         list.add(scanA);
         list.add(scanB);
 

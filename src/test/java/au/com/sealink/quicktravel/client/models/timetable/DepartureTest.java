@@ -1,15 +1,11 @@
 package au.com.sealink.quicktravel.client.models.timetable;
 
+import static junit.framework.TestCase.assertEquals;
+
 import au.com.sealink.quicktravel.client.helpers.DateHelper;
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
-import au.com.sealink.quicktravel.client.models.Resource;
 import com.google.gson.Gson;
 import org.junit.Test;
-
-import java.util.Date;
-
-import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.*;
 
 public class DepartureTest {
     private void assertData(Departure actual) {

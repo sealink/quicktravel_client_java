@@ -1,10 +1,12 @@
 package au.com.sealink.quicktravel.client.models;
 
+import static junit.framework.TestCase.assertEquals;
+
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import com.google.gson.Gson;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
+
 
 public class VehicleTypeTest {
     private void assertData(VehicleType actual) {

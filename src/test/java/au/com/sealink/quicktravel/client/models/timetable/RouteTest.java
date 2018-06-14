@@ -1,10 +1,10 @@
 package au.com.sealink.quicktravel.client.models.timetable;
 
+import static junit.framework.TestCase.assertEquals;
+
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import com.google.gson.Gson;
 import org.junit.Test;
-
-import static junit.framework.TestCase.assertEquals;
 
 public class RouteTest {
     private void assertData(Route actual) {

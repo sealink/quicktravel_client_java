@@ -22,16 +22,8 @@ public class ConsumerSplitTicket extends BaseTicket {
         return vehicles;
     }
 
-    public void setVehicles(List<Vehicle> vehicles) {
-        this.vehicles = vehicles;
-    }
-
     public List<Passenger> getPassengers() {
         return passengers;
-    }
-
-    public void setPassengers(List<Passenger> passengers) {
-        this.passengers = passengers;
     }
     //endregion
 }

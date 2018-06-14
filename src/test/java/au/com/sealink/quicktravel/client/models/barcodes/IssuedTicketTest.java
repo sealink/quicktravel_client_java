@@ -32,7 +32,7 @@ public class IssuedTicketTest {
         Assert.assertEquals(null, template.getDailyUsesLimit());
 
         assertEquals(1, (int)actual.getPassengers().get("Adult"));
-
+        assertEquals(0, (int)actual.getVehicles().size());
         Assert.assertFalse(actual.isActive());
     }
 

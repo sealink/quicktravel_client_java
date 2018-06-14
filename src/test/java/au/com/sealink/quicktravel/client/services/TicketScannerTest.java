@@ -13,6 +13,26 @@ import org.junit.Test;
 public class TicketScannerTest {
 
     @Test
+    public void unknownTicket() {
+        String json = FixtureHelper.fromFile("fixtures/unknown_barcode.json");
+        try {
+            TicketScanner.fromJson(json);
+            Assert.fail("Expected exception");
+        } catch (InvalidTicketException e) {
+        }
+    }
+
+    @Test
+    public void invalidJson() {
+        String json = FixtureHelper.fromFile("fixtures/invalid_barcode.json");
+        try {
+            TicketScanner.fromJson(json);
+            Assert.fail("Expected exception");
+        } catch (InvalidTicketException e) {
+        }
+    }
+
+    @Test
     public void scanReservationTicket() {
         String json = FixtureHelper.fromFile("fixtures/reservation_barcode.json");
         Object barcode = null;

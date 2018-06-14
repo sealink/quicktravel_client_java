@@ -17,6 +17,7 @@ public class PassengerTypeTest {
         assertEquals("Ad", actual.getCode());
         assertEquals("", actual.getConditions());
         assertEquals(Boolean.FALSE, actual.getRequiresReview());
+        assertEquals(new Integer(30), actual.getDefaultAge());
     }
 
     @Test

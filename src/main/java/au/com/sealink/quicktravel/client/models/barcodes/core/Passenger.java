@@ -35,9 +35,5 @@ public class Passenger {
     public ConsumerType getConsumerType() {
         return this.type;
     }
-
-    public void setConsumerType(ConsumerType type) {
-        this.type = type;
-    }
     //endregion
 }

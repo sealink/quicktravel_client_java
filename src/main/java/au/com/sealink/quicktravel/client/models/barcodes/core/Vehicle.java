@@ -42,56 +42,28 @@ public class Vehicle {
         return type;
     }
 
-    public void setConsumerType(ConsumerType type) {
-        this.type = type;
-    }
-
     public float getLength() {
         return length;
-    }
-
-    public void setLength(Float length) {
-        this.length = length;
     }
 
     public Float getWidth() {
         return width;
     }
 
-    public void setWidth(Float width) {
-        this.width = width;
-    }
-
     public Float getHeight() {
         return height;
-    }
-
-    public void setHeight(Float height) {
-        this.height = height;
     }
 
     public String getDetails() {
         return details;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
     public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
     public String getRegistration() {
         return registration;
-    }
-
-    public void setRegistration(String registration) {
-        this.registration = registration;
     }
     //endregion
 }

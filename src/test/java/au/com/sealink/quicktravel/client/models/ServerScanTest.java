@@ -16,5 +16,7 @@ public class ServerScanTest {
         ServerScan scan = new ServerScan();
         Assert.assertEquals(null, scan.getId());
         Assert.assertEquals(null, scan.getBarcode());
+        Assert.assertEquals(null, scan.getErrorCode());
+        Assert.assertEquals(Boolean.FALSE, scan.getBoarded());
     }
 }

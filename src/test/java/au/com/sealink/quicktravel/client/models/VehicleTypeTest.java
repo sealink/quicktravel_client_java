@@ -30,6 +30,7 @@ public class VehicleTypeTest {
         assertEquals(2.2f, actual.getDefaultHeight());
         assertEquals(Boolean.FALSE, actual.getRequireDropOffLocation());
         assertEquals(Boolean.FALSE, actual.getHasDriver());
+        assertEquals(Boolean.TRUE, actual.getFixedWeight());
         assertEquals("Vehicle Description", actual.getDescription());
     }
 

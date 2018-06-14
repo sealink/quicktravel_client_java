@@ -1,0 +1,15 @@
+package au.com.sealink.quicktravel.client.models;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class ServerScanErrorCodeTest {
+    @Test
+    public void testValues() {
+        assertEquals(0, ServerScanErrorCode.None.getValue());
+        assertEquals(1, ServerScanErrorCode.WrongDate.getValue());
+        assertEquals(2, ServerScanErrorCode.WrongResource.getValue());
+        assertEquals(3, ServerScanErrorCode.WrongTime.getValue());
+    }
+}

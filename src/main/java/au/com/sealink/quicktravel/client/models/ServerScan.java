@@ -22,7 +22,7 @@ public class ServerScan {
     private Boolean boarded;
 
     public ServerScan() {
-
+        this.setBoarded(false);
     }
 
     public ServerScan(String id, ITicket barcode, ServerScanErrorCode errorCode, Boolean boarded) {
@@ -53,8 +53,17 @@ public class ServerScan {
         this.errorCode = errorCode;
     }
 
+    public ServerScanErrorCode getErrorCode() {
+        return this.errorCode;
+    }
+
     public void setBoarded(Boolean boarded) {
         this.boarded = boarded;
+    }
+
+    public Boolean getBoarded() {
+        return this.boarded;
+
     }
     //endregion
 }

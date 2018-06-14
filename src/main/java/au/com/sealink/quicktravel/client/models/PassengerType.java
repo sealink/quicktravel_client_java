@@ -8,7 +8,7 @@ import java.util.Date;
 public class PassengerType {
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private int id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -27,12 +27,6 @@ public class PassengerType {
     @SerializedName("default_age")
     @Expose
     private Integer defaultAge;
-    @SerializedName("created_at")
-    @Expose
-    private Date createdAt;
-    @SerializedName("updated_at")
-    @Expose
-    private Date updatedAt;
     @SerializedName("code")
     @Expose
     private String code;
@@ -44,11 +38,11 @@ public class PassengerType {
     private Boolean requiresReview;
 
     //region GETTER/SETTERS
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -98,22 +92,6 @@ public class PassengerType {
 
     public void setDefaultAge(Integer defaultAge) {
         this.defaultAge = defaultAge;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 
     public String getCode() {

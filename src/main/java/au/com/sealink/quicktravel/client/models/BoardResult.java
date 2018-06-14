@@ -3,6 +3,7 @@ package au.com.sealink.quicktravel.client.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BoardResult {
@@ -20,7 +21,7 @@ public class BoardResult {
 
     @SerializedName("diff")
     @Expose
-    private List<List<String>> diff;
+    private List<List<String>> diff = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -48,9 +49,5 @@ public class BoardResult {
 
     public List<List<String>> getDiff() {
         return diff;
-    }
-
-    public void setDiff(List<List<String>> diff) {
-        this.diff = diff;
     }
 }

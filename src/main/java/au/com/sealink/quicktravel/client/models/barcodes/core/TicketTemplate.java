@@ -36,24 +36,12 @@ public class TicketTemplate {
         return activationTrigger;
     }
 
-    public void setActivationTrigger(ActivationTrigger activationTrigger) {
-        this.activationTrigger = activationTrigger;
-    }
-
     public int getExpiryDays() {
         return expiryDays;
     }
 
-    public void setExpiryDays(int expiryDays) {
-        this.expiryDays = expiryDays;
-    }
-
     public int getMaximumUses() {
         return maximumUses;
-    }
-
-    public void setMaximumUses(int maximumUses) {
-        this.maximumUses = maximumUses;
     }
 
     public int getValidityDurationMinutes() {
@@ -66,10 +54,6 @@ public class TicketTemplate {
 
     public Object getDailyUsesLimit() {
         return dailyUsesLimit;
-    }
-
-    public void setDailyUsesLimit(Integer dailyUsesLimit) {
-        this.dailyUsesLimit = dailyUsesLimit;
     }
     //endregion
 }

@@ -8,4 +8,8 @@ public class BoardRequest {
     public BoardRequest(List<ServerScan> tickets) {
         barcodes = tickets;
     }
+
+    public List<ServerScan> getBarcodes() {
+        return this.barcodes;
+    }
 }

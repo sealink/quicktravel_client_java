@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [TT-4168] Add API support for Mobile Companion application
+* [TT-4182] Add tests for model classes
 
 ## 0.1.0
 

@@ -42,17 +42,10 @@ public class IssuedTicket extends BaseTicket {
         return passengers;
     }
 
-    public void setPassengers(ConsumerTypeCount passengers) {
-        this.passengers = passengers;
-    }
-
     public ConsumerTypeCount getVehicles() {
         return vehicles;
     }
 
-    public void setVehicles(ConsumerTypeCount vehicles) {
-        this.vehicles = vehicles;
-    }
     //endregion
 
     @Override

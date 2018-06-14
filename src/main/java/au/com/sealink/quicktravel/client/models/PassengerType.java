@@ -8,7 +8,7 @@ import java.util.Date;
 public class PassengerType {
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private int id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -44,11 +44,11 @@ public class PassengerType {
     private Boolean requiresReview;
 
     //region GETTER/SETTERS
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

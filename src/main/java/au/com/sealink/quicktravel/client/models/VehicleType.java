@@ -51,12 +51,6 @@ public class VehicleType {
     @SerializedName("appear_on_manifest")
     @Expose
     private Boolean appearOnManifest;
-    @SerializedName("created_at")
-    @Expose
-    private Date createdAt;
-    @SerializedName("updated_at")
-    @Expose
-    private Date updatedAt;
     @SerializedName("multiply_length")
     @Expose
     private Boolean multiplyLength;
@@ -72,13 +66,16 @@ public class VehicleType {
     @SerializedName("require_drop_off_location")
     @Expose
     private Boolean requireDropOffLocation;
+    @SerializedName("has_driver")
+    @Expose
+    private Boolean hasDriver;
 
     //region GETTER/SETTERS
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -194,22 +191,6 @@ public class VehicleType {
         this.appearOnManifest = appearOnManifest;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
     public Boolean getMultiplyLength() {
         return multiplyLength;
     }
@@ -248,6 +229,14 @@ public class VehicleType {
 
     public void setRequireDropOffLocation(Boolean requireDropOffLocation) {
         this.requireDropOffLocation = requireDropOffLocation;
+    }
+
+    public Boolean getHasDriver() {
+        return hasDriver;
+    }
+
+    public void setHasDriver(Boolean hasDriver) {
+        this.hasDriver = hasDriver;
     }
     //endregion
 }

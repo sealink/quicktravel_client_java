@@ -1,0 +1,6 @@
+{
+  "name": "Cash",
+  "icon_url": "http://www.google.com",
+  "transaction_fee": "1.23",
+  "gateway": "braintree"
+}

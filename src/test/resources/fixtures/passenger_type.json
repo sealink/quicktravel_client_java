@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "Adult",
+  "minimum_age": null,
+  "maximum_age": null,
+  "age_range_required": false,
+  "position": 1,
+  "default_age": 30,
+  "created_at": "2011-04-07T07:07:12.000+09:30",
+  "updated_at": "2018-04-20T14:49:41.000+09:30",
+  "code": "Ad",
+  "conditions": "",
+  "requires_review": false
+}

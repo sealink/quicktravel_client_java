@@ -1,0 +1,13 @@
+{
+  "id": "uuid-1",
+  "error": "checkin_error",
+  "status": 422,
+  "diff": [
+    [
+      "~",
+      "reservation.departure_date",
+      "2017-10-04",
+      "2017-10-05"
+    ]
+  ]
+}

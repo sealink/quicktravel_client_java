@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.2.0
 
 * [TT-4168] Add API support for Mobile Companion application
 * [TT-4182] Add tests for model classes

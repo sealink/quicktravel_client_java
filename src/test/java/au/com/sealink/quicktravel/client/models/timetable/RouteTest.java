@@ -25,7 +25,7 @@ public class RouteTest {
         Route actual = new Route();
         actual.setId(2);
         actual.setName("Cape Jervis to Penneshaw");
-        actual.getDepartures().add(new Departure());
+        actual.getDepartures().add(new Departure(null));
         assertData(actual);
     }
 }

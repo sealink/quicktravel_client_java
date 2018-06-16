@@ -5,7 +5,6 @@ import org.joda.time.Duration;
 import au.com.sealink.quicktravel.client.models.timetable.Departure;
 import au.com.sealink.quicktravel.client.models.timetable.Route;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 

@@ -1,11 +1,10 @@
 package au.com.sealink.quicktravel.client.models.barcodes;
 
-import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
-import org.junit.Test;
-
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
+
+import au.com.sealink.quicktravel.client.models.barcodes.core.Format;
+import java.util.ArrayList;
+import org.junit.Test;
 
 public class BaseTicketTest {
     @Test

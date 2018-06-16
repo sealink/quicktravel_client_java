@@ -1,5 +1,7 @@
 package au.com.sealink.quicktravel.client.services;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
@@ -19,6 +21,7 @@ public class TicketScannerTest {
             TicketScanner.fromJson(json);
             Assert.fail("Expected exception");
         } catch (InvalidTicketException e) {
+            assertThat(e.getMessage(), is("Unknown ticket format"));
         }
     }
 
@@ -29,6 +32,7 @@ public class TicketScannerTest {
             TicketScanner.fromJson(json);
             Assert.fail("Expected exception");
         } catch (InvalidTicketException e) {
+            assertThat(e.getMessage(), is("Invalid ticket format"));
         }
     }
 

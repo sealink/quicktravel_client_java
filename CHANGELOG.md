@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-4198] Add departure finder for closest time
+
 ## 0.2.0
 
 * [TT-4168] Add API support for Mobile Companion application

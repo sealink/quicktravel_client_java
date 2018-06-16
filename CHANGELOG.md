@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [TT-4198] Add departure finder for closest time
+* [TT-4200] Allow resource categories to be filtered by product_type_ids or ids
 
 ## 0.2.0
 

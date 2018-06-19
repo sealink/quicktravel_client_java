@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.3.0
 
 * [TT-4198] Add departure finder for closest time
 * [TT-4200] Allow resource categories to be filtered by product_type_ids or ids

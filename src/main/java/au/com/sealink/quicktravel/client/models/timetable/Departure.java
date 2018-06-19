@@ -22,6 +22,10 @@ public class Departure {
     @Expose
     Date departsAt;
 
+    public Departure(Date departsAt) {
+        this.departsAt = departsAt;
+    }
+
     //region GETTER/SETTERS
     public int getId() {
         return id;

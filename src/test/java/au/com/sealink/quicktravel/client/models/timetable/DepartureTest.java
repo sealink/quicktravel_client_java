@@ -24,7 +24,7 @@ public class DepartureTest {
 
     @Test
     public void fromSetters() {
-        Departure actual = new Departure();
+        Departure actual = new Departure(null);
         actual.setId(7990793);
         actual.setTripId(1);
         actual.setState("active");

@@ -34,13 +34,11 @@ public interface QuickTravelApiClient {
             @Query("web_site_id") Integer websiteId
     );
 
-    @GET("resources")
-    Single<List<Resource>> getResources(
+    @GET("resource_categories")
+    Single<List<ResourceCategory>> resourceCategories(
+            @Query("ids") List<Integer> ids,
             @Query("product_type_ids") List<Integer> productTypeIds
     );
-
-    @GET("resource_categories")
-    Single<List<ResourceCategory>> resourceCategories();
 
     @GET("passenger_types.json")
     Single<List<PassengerType>> getPassengerTypes();

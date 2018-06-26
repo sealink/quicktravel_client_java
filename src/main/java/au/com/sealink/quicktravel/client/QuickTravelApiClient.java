@@ -2,6 +2,7 @@ package au.com.sealink.quicktravel.client;
 
 import au.com.sealink.quicktravel.client.models.BoardRequest;
 import au.com.sealink.quicktravel.client.models.BoardResult;
+import au.com.sealink.quicktravel.client.models.EncryptedData;
 import au.com.sealink.quicktravel.client.models.PassengerType;
 import au.com.sealink.quicktravel.client.models.PaymentType;
 import au.com.sealink.quicktravel.client.models.ProductType;
@@ -27,6 +28,9 @@ public interface QuickTravelApiClient {
     Single<Response<ResponseBody>> logout(
             @Header("X-CSRF-Token") String token
     );
+
+    @GET("issued_tickets/barcodes/{reference}")
+    Single<EncryptedData> getBarcode(@Path("reference") String reference);
 
     @GET("resources")
     Single<List<Resource>> getResources(

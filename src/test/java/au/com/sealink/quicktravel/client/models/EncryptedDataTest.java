@@ -9,7 +9,7 @@ import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 public class EncryptedDataTest {
 
     private void assertData(EncryptedData actual) {
-        assertEquals("Error Message", actual.getEncryptedData());
+        assertEquals("Error message", actual.getEncryptedData());
     }
 
     @Test

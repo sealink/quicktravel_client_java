@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-4238] Add issued_tickets/barcodes endpoint
+
 ## 0.3.0
 
 * [TT-4198] Add departure finder for closest time

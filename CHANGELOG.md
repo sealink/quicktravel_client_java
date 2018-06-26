@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.4.0
 
 * [TT-4238] Add issued_tickets/barcodes endpoint
 

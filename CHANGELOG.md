@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-4352] Expose pricing api/resource parameters
+
 ## 0.4.0
 
 * [TT-4238] Add issued_tickets/barcodes endpoint

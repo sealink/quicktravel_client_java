@@ -35,7 +35,10 @@ public interface QuickTravelApiClient {
     @GET("resources")
     Single<List<Resource>> getResources(
             @Query("product_type_ids") List<Integer> productTypeIds,
-            @Query("web_site_id") Integer websiteId
+            @Query("web_site_id") Integer websiteId,
+            @Query("price") Boolean price,
+            @Query("children") Boolean children,
+            @Query("active_only") Boolean activeOnly
     );
 
     @GET("resource_categories")

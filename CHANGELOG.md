@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.5.0
 
 * [TT-4351] Add new scope parameter to timetable API
 * [TT-4352] Expose pricing api/resource parameters

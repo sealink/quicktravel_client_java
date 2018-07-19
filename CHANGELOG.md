@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+* [TT-4351] Add new scope parameter to timetable API
 * [TT-4352] Expose pricing api/resource parameters
 
 ## 0.4.0

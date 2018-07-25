@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-4368] Add support for api/routes endpoint
+
 ## 0.5.0
 
 * [TT-4351] Add new scope parameter to timetable API

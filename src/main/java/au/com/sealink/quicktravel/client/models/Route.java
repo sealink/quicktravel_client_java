@@ -29,7 +29,7 @@ public class Route {
     @Expose
     private List<RouteStop> routeStops = new ArrayList<>();
 
-
+    //region GETTER/SETTERS
     public int getId() {
         return id;
     }
@@ -57,4 +57,5 @@ public class Route {
     public List<RouteStop> getRouteStops() {
         return routeStops;
     }
+    //endregion
 }

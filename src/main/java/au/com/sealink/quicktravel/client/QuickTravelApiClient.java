@@ -8,6 +8,7 @@ import au.com.sealink.quicktravel.client.models.PaymentType;
 import au.com.sealink.quicktravel.client.models.ProductType;
 import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
+import au.com.sealink.quicktravel.client.models.Route;
 import au.com.sealink.quicktravel.client.models.User;
 import au.com.sealink.quicktravel.client.models.timetable.TimeTable;
 import io.reactivex.Single;
@@ -64,6 +65,9 @@ public interface QuickTravelApiClient {
 
     @GET("product_types")
     Single<List<ProductType>> productTypes();
+
+    @GET("routes")
+    Single<List<Route>> getRoutes(@Path("productTypeId") int productTypeId);
 
     @POST("issued_tickets/board")
     Single<List<BoardResult>> board(

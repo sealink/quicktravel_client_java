@@ -12,30 +12,39 @@ public class Search {
     @SerializedName("product_type_id")
     @Expose
     private int productTypeId;
+
     @SerializedName("route_id")
     @Expose
     private int routeId;
+
     @SerializedName("from_route_stop_id")
     @Expose
     private Integer fromRouteStopId = null;
+
     @SerializedName("to_route_stop_id")
     @Expose
     private Integer toRouteStopId = null;
+
     @SerializedName("client_id")
     @Expose
     private Integer clientId = null;
+
     @SerializedName("show")
     @Expose
     private String show = "inventory_exists";
+
     @SerializedName("add_return")
     @Expose
     private Boolean addReturn;
+
     @SerializedName("forward")
     @Expose
     private Segment forward = new Segment();
+
     @SerializedName("return")
     @Expose
     private Segment returning = new Segment();
+
     @SerializedName("segments")
     @Expose
     private List<String> mSegmentNames = new ArrayList<>();

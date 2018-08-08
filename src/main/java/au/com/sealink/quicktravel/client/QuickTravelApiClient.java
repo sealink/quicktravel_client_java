@@ -30,9 +30,7 @@ public interface QuickTravelApiClient {
     );
 
     @GET("api/logout")
-    Single<Response<ResponseBody>> logout(
-            @Header("X-CSRF-Token") String token
-    );
+    Single<Response<ResponseBody>> logout();
 
     @GET("api/issued_tickets/barcodes/{reference}")
     Single<EncryptedData> getBarcode(@Path("reference") String reference);
@@ -74,18 +72,11 @@ public interface QuickTravelApiClient {
     Single<List<Route>> getRoutes(@Path("productTypeId") int productTypeId);
 
     @POST("api/issued_tickets/board")
-    Single<List<BoardResult>> board(
-            @Header("X-CSRF-Token") String token,
-            @Body BoardRequest boardRequest
-    );
+    Single<List<BoardResult>> board(@Body BoardRequest boardRequest);
 
     @POST("reservation_for/scheduled_trips/find_services_for.json")
-    Single<List<Product>> findServicesFor(
-            @Header("X-CSRF-Token") String token,
-            @Body Search search);
+    Single<List<Product>> findServicesFor(@Body Search search);
 
     @POST("reservation_for/scheduled_trips")
-    Single<Booking> reservationFor(
-            @Header("X-CSRF-Token") String token,
-            @Body Create create);
+    Single<Booking> reservationFor(@Body Create create);
 }

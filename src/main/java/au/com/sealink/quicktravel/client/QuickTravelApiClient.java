@@ -16,6 +16,8 @@ import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Cre
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
 import au.com.sealink.quicktravel.client.models.timetable.TimeTable;
 import io.reactivex.Single;
+
+import java.util.HashMap;
 import java.util.List;
 import okhttp3.ResponseBody;
 import retrofit2.Response;
@@ -84,4 +86,22 @@ public interface QuickTravelApiClient {
 
     @POST("reservation_for/scheduled_trips")
     Single<Booking> reservationFor(@Body Create create);
+
+    //region Bookings
+    @PATCH("/api/bookings/{id}/activate")
+    Single<Booking> activateBooking(@Path("id") int bookingId);
+
+    @GET("/api/bookings/current_booking.json")
+    Single<Booking> getCurrentBooking();
+
+    @GET("/api/bookings.json")
+    Single<List<Booking>> getRecentBookings();
+
+    @GET("/api/bookings/{id}.json")
+    Single<Booking> getBookingWithId(@Path("id") int bookingId);
+
+    @PATCH("/api/bookings/{id}.json")
+    Single<Booking> updateBooking(@Path("id") int bookingId,
+                                  @Body HashMap<String, Object> updates);
+    //endregion
 }

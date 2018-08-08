@@ -2,6 +2,7 @@ package au.com.sealink.quicktravel.client;
 
 import au.com.sealink.quicktravel.client.models.BoardRequest;
 import au.com.sealink.quicktravel.client.models.BoardResult;
+import au.com.sealink.quicktravel.client.models.Booking;
 import au.com.sealink.quicktravel.client.models.EncryptedData;
 import au.com.sealink.quicktravel.client.models.PassengerType;
 import au.com.sealink.quicktravel.client.models.PaymentType;
@@ -10,6 +11,9 @@ import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
 import au.com.sealink.quicktravel.client.models.Route;
 import au.com.sealink.quicktravel.client.models.User;
+import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
+import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
+import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
 import au.com.sealink.quicktravel.client.models.timetable.TimeTable;
 import io.reactivex.Single;
 import java.util.List;
@@ -74,4 +78,14 @@ public interface QuickTravelApiClient {
             @Header("X-CSRF-Token") String token,
             @Body BoardRequest boardRequest
     );
+
+    @POST("reservation_for/scheduled_trips/find_services_for.json")
+    Single<List<Product>> findServicesFor(
+            @Header("X-CSRF-Token") String token,
+            @Body Search search);
+
+    @POST("reservation_for/scheduled_trips")
+    Single<Booking> reservationFor(
+            @Header("X-CSRF-Token") String token,
+            @Body Create create);
 }

@@ -57,7 +57,7 @@ public interface QuickTravelApiClient {
 
     @GET("api/payment_types.json")
     Single<List<PaymentType>> getPaymentTypes(
-            @Query("ids") List<Integer> paymentTypeIds
+            @Query("ids") List<Integer> ids
     );
 
     @GET("api/services/daily_timetable")

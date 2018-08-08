@@ -1,0 +1,36 @@
+{
+  "booking_id": 1,
+  "add_return": true,
+  "forward": {
+    "driver_passenger_type_id": 1,
+    "first_travel_date": "2018-08-05",
+    "passenger_types": {
+      "1": 1
+    },
+    "vehicle_types": [
+      {
+        "vehicle_type_id": 1,
+        "length": 5.0
+      }
+    ],
+    "trip_id": 1
+  },
+  "return": {
+    "driver_passenger_type_id": 1,
+    "first_travel_date": "2018-08-06",
+    "passenger_types": {
+      "1": 1
+    },
+    "vehicle_types": [
+      {
+        "vehicle_type_id": 1,
+        "length": 5.0
+      }
+    ],
+    "service_id": 2
+  },
+  "segments": [
+    "forward",
+    "return"
+  ]
+}

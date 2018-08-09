@@ -4,6 +4,7 @@
 
 * [TT-4368] Add support for api/routes endpoint
 * [TT-4418] Add support for create/edit scheduled trip endpoints
+* [TT-4433] Add network interceptor for CRSF token
 * [TT-4429] Fix routes product_type_id parameter
 
 ## 0.5.0

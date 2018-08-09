@@ -3,9 +3,20 @@
 [![Build Status](https://travis-ci.org/sealink/quicktravel_client_java.svg?branch=master)](https://travis-ci.org/sealink/quicktravel_client_java)
 
 
-QuickTravel API library is a common use library developed primarly for use in the SeaLink Android
+QuickTravel API library is a common use library developed primarily for use in the SeaLink Android
 application suite, including Ticketing, Companion and Albert.
 
+#### Authentication
+
+Included with a valid login response is a CRSF token that is required to be passed as a header to
+all POST / PUT requests. To simplify this process you should use the provided TokenInterceptor class
+which implements the Retrofit Interceptor class.
+
+```
+    TokenInterceptor interceptor = new TokenInterceptor();
+    interceptor.setToken("");
+    new OkHttpClient.Builder().addInterceptor(interceptor).build();
+```
 
 #### Deployment
 

@@ -47,7 +47,7 @@ public interface QuickTravelApiClient {
     );
 
     @GET("api/resource_categories")
-    Single<List<ResourceCategory>> resourceCategories(
+    Single<List<ResourceCategory>> getResourceCategories(
             @Query("ids") List<Integer> ids,
             @Query("product_type_ids") List<Integer> productTypeIds
     );
@@ -57,7 +57,7 @@ public interface QuickTravelApiClient {
 
     @GET("api/payment_types.json")
     Single<List<PaymentType>> getPaymentTypes(
-            @Query("ids[]") List<Integer> paymentTypeIds
+            @Query("ids") List<Integer> ids
     );
 
     @GET("api/services/daily_timetable")
@@ -68,10 +68,15 @@ public interface QuickTravelApiClient {
     );
 
     @GET("api/product_types")
-    Single<List<ProductType>> productTypes();
+    Single<List<ProductType>> getProductTypes(
+            @Query("ids") List<Integer> ids
+    );
 
     @GET("api/routes")
-    Single<List<Route>> getRoutes(@Path("productTypeId") int productTypeId);
+    Single<List<Route>> getRoutes(
+            @Query("ids") List<Integer> ids,
+            @Query("product_type_id") Integer productTypeId
+    );
 
     @POST("api/issued_tickets/board")
     Single<List<BoardResult>> board(

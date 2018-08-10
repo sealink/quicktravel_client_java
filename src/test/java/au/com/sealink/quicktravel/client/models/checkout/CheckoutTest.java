@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 
-
 public class CheckoutTest {
     @Test
     public void toJSON() {

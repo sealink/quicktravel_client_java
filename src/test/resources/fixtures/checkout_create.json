@@ -1,0 +1,11 @@
+{
+  "booking_id": 24,
+  "pay_balance": true,
+  "payment": {
+    "amount_in_cents": 1000,
+    "payment_type_id": 1,
+    "uid": "123",
+    "comment": "Test Payment Comment",
+    "till_id": 3
+  }
+}

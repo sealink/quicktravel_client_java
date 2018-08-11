@@ -11,6 +11,8 @@ import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
 import au.com.sealink.quicktravel.client.models.Route;
 import au.com.sealink.quicktravel.client.models.User;
+import au.com.sealink.quicktravel.client.models.checkout.Checkout;
+import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
 import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
@@ -86,6 +88,9 @@ public interface QuickTravelApiClient {
 
     @POST("reservation_for/scheduled_trips")
     Single<Booking> reservationFor(@Body Create create);
+
+    @POST("api/checkouts")
+    Single<CheckoutResponse> checkout(@Body Checkout checkout);
 
     //region Bookings
     @PATCH("/api/bookings/{id}/activate")

@@ -10,6 +10,7 @@ import au.com.sealink.quicktravel.client.models.ProductType;
 import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
 import au.com.sealink.quicktravel.client.models.Route;
+import au.com.sealink.quicktravel.client.models.Till;
 import au.com.sealink.quicktravel.client.models.User;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
@@ -109,4 +110,7 @@ public interface QuickTravelApiClient {
     Single<Booking> updateBooking(@Path("id") int bookingId,
                                   @Body HashMap<String, Object> updates);
     //endregion
+
+    @GET("/api/tills.json")
+    Single<List<Till>> getTills();
 }

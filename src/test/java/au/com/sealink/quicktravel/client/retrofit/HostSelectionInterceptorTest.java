@@ -19,7 +19,8 @@ public class HostSelectionInterceptorTest {
         mockWebServer.start();
 
         HostSelectionInterceptor interceptor = new HostSelectionInterceptor();
-        interceptor.setHost("localhost");
+        interceptor.setHost(mockWebServer.url("/").host());
+
         OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         RequestBody body = RequestBody.create(MediaType.parse("application/json"), "{}");
@@ -27,7 +28,7 @@ public class HostSelectionInterceptorTest {
         okHttpClient.newCall(request).execute();
 
         RecordedRequest recordedRequest = mockWebServer.takeRequest();
-        Assert.assertEquals("localhost", recordedRequest.getRequestUrl().host());
+        Assert.assertEquals(mockWebServer.getHostName(), recordedRequest.getRequestUrl().host());
 
         mockWebServer.shutdown();
     }

@@ -8,6 +8,7 @@
 * [TT-4429] Fix routes product_type_id parameter
 * [TT-4432] Add endpoints for updating and retrieving bookings
 * [TT-4435] Add support for checkout endpoint
+* [TT-4446] Add analytics support
 
 ## 0.5.0
 

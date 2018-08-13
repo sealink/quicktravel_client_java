@@ -18,6 +18,13 @@ jacocoTestReport {
     }
 }
 
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "short"
+    }
+}
+
 versioning {
     branchEnv = ['TRAVIS_BRANCH', 'TRAVIS_TAG', 'TRAVIS_PULL_REQUEST_BRANCH', 'GIT_BRANCH']
 }
@@ -42,9 +49,9 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.code.gson:gson:2.8.4'
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.14'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
     implementation 'net.danlew:android.joda:2.9.5'
     testCompile 'joda-time:joda-time:2.9.5'
     testCompile 'junit:junit:4.12'

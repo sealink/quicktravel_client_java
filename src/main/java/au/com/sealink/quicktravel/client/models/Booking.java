@@ -44,7 +44,7 @@ public class Booking {
 
     @SerializedName("nett_in_cents")
     @Expose
-    private int netInCents;
+    private int nettInCents;
 
     @SerializedName("client")
     @Expose
@@ -155,12 +155,12 @@ public class Booking {
         this.grossInCents = grossInCents;
     }
 
-    public int getNetInCents() {
-        return netInCents;
+    public int getNettInCents() {
+        return nettInCents;
     }
 
-    public void setNetInCents(int netInCents) {
-        this.netInCents = netInCents;
+    public void setNettInCents(int netInCents) {
+        this.nettInCents = netInCents;
     }
     //endregion
 }

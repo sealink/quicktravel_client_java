@@ -17,7 +17,7 @@ public class BookingTest {
         Assert.assertEquals("Internal Comment", booking.getInternalComments());
         Assert.assertEquals("Public Comment", booking.getPublicComments());
         Assert.assertEquals(1500, booking.getGrossInCents());
-        Assert.assertEquals(1300, booking.getNetInCents());
+        Assert.assertEquals(1300, booking.getNettInCents());
         Assert.assertEquals("5000", booking.getPostCode());
         Assert.assertEquals("ABC-123", booking.getExternalIdentifier());
 
@@ -55,7 +55,7 @@ public class BookingTest {
         actual.setCreatedAt(DateHelper.parseIso("2018-08-14T11:25:15+10:00"));
         actual.setUpdatedAt(DateHelper.parseIso("2018-08-14T11:45:22+10:00"));
         actual.setCountryId(16);
-        actual.setNetInCents(1300);
+        actual.setNettInCents(1300);
         actual.setGrossInCents(1500);
         actual.setPostCode("5000");
         actual.setPublicComments("Public Comment");

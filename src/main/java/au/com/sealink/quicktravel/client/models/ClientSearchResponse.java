@@ -31,7 +31,6 @@ public class ClientSearchResponse {
         return page;
     }
 
-
     public int getPages() {
         return pages;
     }

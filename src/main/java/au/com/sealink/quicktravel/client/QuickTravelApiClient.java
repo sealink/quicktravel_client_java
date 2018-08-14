@@ -11,6 +11,7 @@ import au.com.sealink.quicktravel.client.models.ProductType;
 import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
 import au.com.sealink.quicktravel.client.models.Route;
+import au.com.sealink.quicktravel.client.models.Till;
 import au.com.sealink.quicktravel.client.models.User;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
@@ -103,6 +104,9 @@ public interface QuickTravelApiClient {
     @GET("/api/bookings.json")
     Single<List<Booking>> getRecentBookings();
 
+    @POST("/api/bookings.json")
+    Single<Booking> createBooking(@Body HashMap<String, Object> fields);
+
     @GET("/api/bookings/{id}.json")
     Single<Booking> getBookingWithId(@Path("id") int bookingId);
 
@@ -114,4 +118,6 @@ public interface QuickTravelApiClient {
     @GET("/api/countries.json")
     Single<List<Country>> getCountries();
 
+    @GET("/api/tills.json")
+    Single<List<Till>> getTills();
 }

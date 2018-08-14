@@ -13,7 +13,7 @@
   ],
   "first_travel_date": "08-08-2018",
   "last_travel_date": "08-08-2018",
-  "time_class": "in_past",
+  "travelling_in_past": true,
   "service_state_ids": [
     0,
     0,

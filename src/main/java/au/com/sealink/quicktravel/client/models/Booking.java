@@ -159,8 +159,8 @@ public class Booking {
         return nettInCents;
     }
 
-    public void setNettInCents(int netInCents) {
-        this.nettInCents = netInCents;
+    public void setNettInCents(int nettInCents) {
+        this.nettInCents = nettInCents;
     }
     //endregion
 }

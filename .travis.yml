@@ -3,7 +3,7 @@ install: true
 jdk:
 - oraclejdk8
 script:
-- "./gradlew build"
+- "./gradlew build --debug"
 after_success:
 - "./gradlew jacocoTestReport coveralls"
 before_cache:

@@ -12,6 +12,7 @@
 * [TT-4452] Add support for tills endpoint
 * [TT-4450] Add network interceptor to change tenant hosts
 * [TT-4449] Add endpoint to create a new booking
+* [TT-4446] Add analytics support
 
 ## 0.5.0
 

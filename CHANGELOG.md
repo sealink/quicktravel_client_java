@@ -8,6 +8,9 @@
 * [TT-4429] Fix routes product_type_id parameter
 * [TT-4432] Add endpoints for updating and retrieving bookings
 * [TT-4435] Add support for checkout endpoint
+* [TT-4451] Add support for countries endpoint
+* [TT-4452] Add support for tills endpoint
+* [TT-4450] Add network interceptor to change tenant hosts
 * [TT-4449] Add endpoint to create a new booking
 
 ## 0.5.0

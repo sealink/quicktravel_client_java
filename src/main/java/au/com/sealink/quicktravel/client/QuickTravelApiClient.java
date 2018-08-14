@@ -3,6 +3,7 @@ package au.com.sealink.quicktravel.client;
 import au.com.sealink.quicktravel.client.models.BoardRequest;
 import au.com.sealink.quicktravel.client.models.BoardResult;
 import au.com.sealink.quicktravel.client.models.Booking;
+import au.com.sealink.quicktravel.client.models.Country;
 import au.com.sealink.quicktravel.client.models.EncryptedData;
 import au.com.sealink.quicktravel.client.models.PassengerType;
 import au.com.sealink.quicktravel.client.models.PaymentType;
@@ -10,6 +11,7 @@ import au.com.sealink.quicktravel.client.models.ProductType;
 import au.com.sealink.quicktravel.client.models.Resource;
 import au.com.sealink.quicktravel.client.models.ResourceCategory;
 import au.com.sealink.quicktravel.client.models.Route;
+import au.com.sealink.quicktravel.client.models.Till;
 import au.com.sealink.quicktravel.client.models.User;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
@@ -112,4 +114,10 @@ public interface QuickTravelApiClient {
     Single<Booking> updateBooking(@Path("id") int bookingId,
                                   @Body HashMap<String, Object> updates);
     //endregion
+
+    @GET("/api/countries.json")
+    Single<List<Country>> getCountries();
+
+    @GET("/api/tills.json")
+    Single<List<Till>> getTills();
 }

@@ -60,6 +60,7 @@ public class ProductTest {
         assertEquals("2000-01-01T06:35:00.000Z", actual.getArrivalTime());
         assertEquals("", actual.getBookingNotes());
         assertEquals(1200, actual.getTotalPriceAdjustmentInCents());
+        assertEquals(true, actual.isTravellingInPast());
     }
 
     @Test
@@ -100,6 +101,7 @@ public class ProductTest {
         actual.setTripId(55);
         actual.setDepartureTime("2000-01-01T05:30:00.000Z");
         actual.setArrivalTime("2000-01-01T06:35:00.000Z");
+        actual.setTravellingInPast(true);
 
         Adjustment adjustment = new Adjustment();
         adjustment.setGrossInCents(1200);

@@ -104,6 +104,9 @@ public interface QuickTravelApiClient {
     @GET("/api/bookings.json")
     Single<List<Booking>> getRecentBookings();
 
+    @POST("/api/bookings.json")
+    Single<Booking> createBooking(@Body HashMap<String, Object> fields);
+
     @GET("/api/bookings/{id}.json")
     Single<Booking> getBookingWithId(@Path("id") int bookingId);
 

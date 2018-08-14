@@ -46,6 +46,10 @@ public class Product {
     @Expose
     private boolean bookable;
 
+    @SerializedName("travelling_in_past")
+    @Expose
+    private boolean travellingInPast;
+
     @SerializedName("reason_unbookable")
     @Expose
     private String reasonUnbookable;
@@ -174,7 +178,6 @@ public class Product {
     public void setLastTravelDate(String lastTravelDate) {
         this.lastTravelDate = lastTravelDate;
     }
-
 
     public List<Integer> getServiceStateIds() {
         return serviceStateIds;
@@ -342,6 +345,14 @@ public class Product {
 
     public void setPriceBreakdownVehiclesInCents(int priceBreakdownVehiclesInCents) {
         this.priceBreakdownVehiclesInCents = priceBreakdownVehiclesInCents;
+    }
+
+    public boolean isTravellingInPast() {
+        return travellingInPast;
+    }
+
+    public void setTravellingInPast(boolean travellingInPast) {
+        this.travellingInPast = travellingInPast;
     }
     //endregion
 }

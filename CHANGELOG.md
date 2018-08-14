@@ -11,6 +11,7 @@
 * [TT-4451] Add support for countries endpoint
 * [TT-4452] Add support for tills endpoint
 * [TT-4450] Add network interceptor to change tenant hosts
+* [TT-4449] Add endpoint to create a new booking
 
 ## 0.5.0
 

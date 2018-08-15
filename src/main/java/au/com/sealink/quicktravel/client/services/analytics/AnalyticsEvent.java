@@ -21,12 +21,12 @@ public class AnalyticsEvent {
         return Collections.unmodifiableMap(this.metrics);
     }
 
-    AnalyticsEvent withAttribute(String name, String value) {
+    public AnalyticsEvent withAttribute(String name, String value) {
         this.attributes.put(name, value);
         return this;
     }
 
-    AnalyticsEvent withMetric(String name, Double value) {
+    public AnalyticsEvent withMetric(String name, Double value) {
         this.metrics.put(name, value);
         return this;
     }

@@ -14,6 +14,7 @@
 * [TT-4449] Add endpoint to create a new booking
 * [TT-4446] Add analytics support
 * [TT-4455] Add client search endpoint
+* [TT-4453] Expand booking object
 
 ## 0.5.0
 

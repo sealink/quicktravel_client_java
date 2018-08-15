@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## 0.6.1
+
+* [TT-4459] Fix Analytics service definition
+
 ## 0.6.0
 
 * [TT-4368] Add support for api/routes endpoint

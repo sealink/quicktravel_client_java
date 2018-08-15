@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.6.0
 
 * [TT-4368] Add support for api/routes endpoint
 * [TT-4418] Add support for create/edit scheduled trip endpoints

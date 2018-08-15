@@ -1,0 +1,20 @@
+{
+  "clients": [
+    {
+      "id": 5,
+      "label": "Dev Test Resident Club",
+      "pic": "http:\/\/gravatar.com\/avatar\/d41d8cd98f00b204e9800998ecf8427e",
+      "email": "",
+      "phone": "000",
+      "mobile": "",
+      "type": "Resident",
+      "notes": "",
+      "payment_method_name": "Pay Direct",
+      "client_ext_id": "None"
+    }
+  ],
+  "page": 1,
+  "pages": 1,
+  "results": 1
+}
+

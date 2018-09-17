@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-4568] Add support for party (person/organisation) creation
+
 ## 0.6.1
 
 * [TT-4459] Fix Analytics service definition

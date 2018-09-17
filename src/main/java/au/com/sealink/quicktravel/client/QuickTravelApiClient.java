@@ -3,6 +3,7 @@ package au.com.sealink.quicktravel.client;
 import au.com.sealink.quicktravel.client.models.*;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
+import au.com.sealink.quicktravel.client.models.createParty.Party;
 import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
@@ -112,5 +113,10 @@ public interface QuickTravelApiClient {
     @GET("/api/parties/clients.json")
     Single<List<ClientSearchResponse>> searchClients(
             @Query("search_query") String query
+    );
+
+    @POST("/api/parties.json")
+    Single<CreatePartyResponse> createParty(
+            @Body CreateParty body
     );
 }

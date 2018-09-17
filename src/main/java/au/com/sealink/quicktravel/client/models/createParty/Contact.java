@@ -3,6 +3,9 @@ package au.com.sealink.quicktravel.client.models.createParty;
 import com.google.gson.annotations.SerializedName;
 
 public class Contact {
+    @SerializedName("name")
+    private String name;
+
     @SerializedName("email")
     private String email;
 
@@ -57,6 +60,14 @@ public class Contact {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     //endregion
 }

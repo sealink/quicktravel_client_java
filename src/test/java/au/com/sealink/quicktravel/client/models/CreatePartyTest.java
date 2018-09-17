@@ -24,6 +24,7 @@ public class CreatePartyTest {
         person.setClient(client);
 
         Contact contact = new Contact();
+        contact.setName("Name");
         contact.setEmail("Email");
         contact.setFax("Fax");
         contact.setMobile("Mobile");
@@ -60,6 +61,7 @@ public class CreatePartyTest {
         Assert.assertEquals("Postcode", person.getAddress().getPostcode());
         Assert.assertEquals(new Integer(14), person.getAddress().getCountryId());
 
+        Assert.assertEquals("Name", person.getContact().getName());
         Assert.assertEquals("Email", person.getContact().getEmail());
         Assert.assertEquals("Fax", person.getContact().getFax());
         Assert.assertEquals("Mobile", person.getContact().getMobile());

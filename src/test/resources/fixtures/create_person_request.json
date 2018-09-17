@@ -3,6 +3,7 @@
     "first_name": "First",
     "last_name": "Last",
     "contact": {
+      "name": "Name",
       "email": "Email",
       "fax": "Fax",
       "mobile": "Mobile",

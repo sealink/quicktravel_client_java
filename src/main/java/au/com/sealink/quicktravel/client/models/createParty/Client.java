@@ -7,7 +7,7 @@ public class Client {
     private int clientTypeId;
 
     @SerializedName("is_frequent_traveller")
-    private Boolean isFrequentTraveller;
+    private Boolean frequentTraveller;
 
     @SerializedName("external_identifier")
     private String externalIdentifier;
@@ -24,12 +24,12 @@ public class Client {
         this.clientTypeId = clientTypeId;
     }
 
-    public Boolean getFrequentTraveller() {
-        return isFrequentTraveller;
+    public Boolean isFrequentTraveller() {
+        return frequentTraveller;
     }
 
     public void setFrequentTraveller(Boolean frequentTraveller) {
-        isFrequentTraveller = frequentTraveller;
+        this.frequentTraveller = frequentTraveller;
     }
 
     public String getExternalIdentifier() {

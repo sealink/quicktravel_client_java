@@ -67,7 +67,7 @@ public class CreatePartyTest {
         Assert.assertEquals("Website", person.getContact().getWebsite());
 
         Assert.assertEquals(3, person.getClient().getClientTypeId());
-        Assert.assertEquals(false, person.getClient().getFrequentTraveller());
+        Assert.assertEquals(false, person.getClient().isFrequentTraveller());
         Assert.assertEquals("Person", person.getPartyType());
     }
 

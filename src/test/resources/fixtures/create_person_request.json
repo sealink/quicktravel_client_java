@@ -1,0 +1,32 @@
+{
+  "party": {
+    "first_name": "First",
+    "last_name": "Last",
+    "contact": {
+      "email": "Email",
+      "fax": "Fax",
+      "mobile": "Mobile",
+      "phone": "Phone",
+      "website": "Website"
+    },
+    "address": {
+      "city": "City",
+      "state": "State",
+      "post_code": "Postcode",
+      "country_id": 14,
+      "address_line1": "Address Line 1",
+      "address_line2": "Address Line 2"
+    },
+    "client": {
+      "client_type_id": 3,
+      "is_frequent_traveller": false
+    },
+    "type": "Person",
+    "gender": "Male",
+    "title": "Mr",
+    "authentication": {
+      "login": "homer",
+      "password": "password"
+    }
+  }
+}

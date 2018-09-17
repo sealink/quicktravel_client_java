@@ -13,7 +13,6 @@ public class CountryTest {
         Assert.assertEquals(2, country.getId());
         Assert.assertEquals("ÅLAND ISLANDS", country.getName());
         Assert.assertEquals("AX", country.getISO3166Code());
-
     }
 
     @Test

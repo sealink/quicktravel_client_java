@@ -1,0 +1,13 @@
+{
+  "party": {
+    "name": "Organisation Name",
+    "business_number": "123456789",
+    "business_number_type": "ABN",
+    "client": {
+      "client_type_id": 3,
+      "external_identifier": "123-ABC",
+      "commission_level_id": 1
+    },
+    "type": "Organisation"
+  }
+}

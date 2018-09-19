@@ -8,6 +8,7 @@ import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
 import au.com.sealink.quicktravel.client.models.timetable.TimeTable;
+import io.reactivex.Completable;
 import io.reactivex.Single;
 
 import java.util.HashMap;
@@ -119,4 +120,7 @@ public interface QuickTravelApiClient {
     Single<CreatePartyResponse> createParty(
             @Body CreateParty body
     );
+
+    @POST("/api/on_account_clients")
+    Completable createOnAccountClient(@Body OnAccountClient client);
 }

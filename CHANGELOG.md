@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [TT-4568] Add support for party (person/organisation) creation
+* [TT-4573] Add support for on account client creation
 
 ## 0.6.1
 

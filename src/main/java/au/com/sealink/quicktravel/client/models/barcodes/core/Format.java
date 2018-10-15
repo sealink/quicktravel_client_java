@@ -10,7 +10,9 @@ public enum Format {
     @SerializedName("1")
     Reservation(1),
     @SerializedName("2")
-    IssuedTicket(2);
+    IssuedTicket(2),
+    @SerializedName("3")
+    OnlineTicket(3);
 
     private final int value;
 

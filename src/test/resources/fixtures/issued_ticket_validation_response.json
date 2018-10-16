@@ -1,0 +1,36 @@
+{
+  "ticket": {
+    "reference": "T2HTTMV",
+    "created_at": "2018-10-15T20:01:11+11:00",
+    "in_use": true,
+    "out_of_uses": false,
+    "out_of_daily_uses": false,
+    "expired": false,
+    "usable": false,
+    "resource": {
+      "id": 631,
+      "name": "WatsonB-CQ 365-Day 15-Trips"
+    },
+    "travel_date": "2018-10-15",
+    "details": "Pax [15 Oct 2018 -- WatsonB-CQ 365-Day 15-Trips -- 2 pax assigned]",
+    "expiry": "15-10-2019 08:16pm",
+    "expiry_days": 365,
+    "uses": [
+      "2018-10-15T20:16:35+11:00",
+      "2018-10-15T20:41:49+11:00"
+    ],
+    "ticket_template": {
+      "name": "WatsonB-CQ 365-Day 15-Trips",
+      "maximum_uses": 15,
+      "expiry_days": 365,
+      "activation_trigger": "first_use",
+      "validity_duration_minutes": 20,
+      "daily_uses_limit": null
+    },
+    "qr_data": "barcode",
+    "passengers": {
+      "1": 1
+    },
+    "vehicles": []
+  }
+}

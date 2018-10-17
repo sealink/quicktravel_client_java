@@ -10,6 +10,20 @@ import java.util.Date;
 public class IssuedTicketTest {
 
     @Test
+    public void equals() {
+        IssuedTicket ticket = new IssuedTicket();
+        ticket.setReference("123-456");
+
+        Assert.assertNotEquals(ticket, new Country());
+
+        IssuedTicket ticketA = new IssuedTicket();
+        Assert.assertNotEquals(ticket, ticketA);
+
+        ticketA.setReference("123-456");
+        Assert.assertEquals(ticket, ticketA);
+    }
+
+    @Test
     public void getValidUnit() {
         IssuedTicket ticket = new IssuedTicket();
         Assert.assertNull(ticket.getValidUntil());

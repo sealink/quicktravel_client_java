@@ -5,6 +5,7 @@
 * [TT-4568] Add support for party (person/organisation) creation
 * [TT-4573] Add support for on account client creation
 * [TT-4699] Add support for new Online Ticket format
+* [TT-4700] Add support for issued tickets validate api
 
 ## 0.6.1
 

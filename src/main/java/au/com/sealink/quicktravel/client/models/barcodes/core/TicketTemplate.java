@@ -44,6 +44,10 @@ public class TicketTemplate {
         return maximumUses;
     }
 
+    public void setMaximumUses(int maximumUses) {
+        this.maximumUses = maximumUses;
+    }
+
     public int getValidityDurationMinutes() {
         return validityDurationMinutes;
     }

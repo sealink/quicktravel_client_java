@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.7.0
 
 * [TT-4568] Add support for party (person/organisation) creation
 * [TT-4573] Add support for on account client creation

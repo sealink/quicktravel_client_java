@@ -8,6 +8,7 @@ import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import au.com.sealink.quicktravel.client.models.barcodes.ConsumerSplitTicket;
 import au.com.sealink.quicktravel.client.models.barcodes.IssuedTicket;
 import au.com.sealink.quicktravel.client.models.barcodes.ReservationTicket;
+import au.com.sealink.quicktravel.client.models.barcodes.OnlineTicket;
 import au.com.sealink.quicktravel.client.models.barcodes.core.InvalidTicketException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -58,6 +59,18 @@ public class TicketScannerTest {
             Assert.fail("Unexpected exception");
         }
         assertTrue(barcode instanceof IssuedTicket);
+    }
+
+    @Test
+    public void scanOnlineTicket() {
+        String json = FixtureHelper.fromFile("fixtures/online_ticket_barcode.json");
+        Object barcode = null;
+        try {
+            barcode = TicketScanner.fromJson(json);
+        } catch (InvalidTicketException e) {
+            Assert.fail("Unexpected exception");
+        }
+        assertTrue(barcode instanceof OnlineTicket);
     }
 
     @Test

@@ -72,6 +72,12 @@ public interface QuickTravelApiClient {
             @Query("product_type_id") Integer productTypeId
     );
 
+    @FormUrlEncoded
+    @POST("api/issued_tickets/validate")
+    Single<IssuedTicketValidationResponse> validateTicket(
+            @Field("identifier") String ticketId
+    );
+
     @POST("api/issued_tickets/board")
     Single<List<BoardResult>> board(@Body BoardRequest boardRequest);
 

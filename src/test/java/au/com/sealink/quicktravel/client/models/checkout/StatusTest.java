@@ -30,6 +30,16 @@ public class StatusTest {
     }
 
     @Test
+    public void statusError() {
+        String json = FixtureHelper.fromFile("fixtures/checkout_status_error.json");
+        Status actual = new Gson().fromJson(json, Status.class);
+
+        Assert.assertFalse(actual.getSuccessful());
+        Assert.assertEquals("An error occurred when processing the payment.", actual.getError());
+        Assert.assertEquals("completed", actual.getProgress());
+    }
+
+    @Test
     public void fromSetters() {
         Status status = new Status();
         status.setSuccessful(true);

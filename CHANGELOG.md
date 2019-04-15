@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-5280] Add support for checkout status
+
 ## 0.7.0
 
 * [TT-4568] Add support for party (person/organisation) creation

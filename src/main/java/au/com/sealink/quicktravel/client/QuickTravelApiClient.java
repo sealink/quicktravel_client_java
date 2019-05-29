@@ -3,6 +3,7 @@ package au.com.sealink.quicktravel.client;
 import au.com.sealink.quicktravel.client.models.*;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
+import au.com.sealink.quicktravel.client.models.checkout.Status;
 import au.com.sealink.quicktravel.client.models.createParty.Party;
 import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
@@ -89,6 +90,9 @@ public interface QuickTravelApiClient {
 
     @POST("api/checkouts")
     Single<CheckoutResponse> checkout(@Body Checkout checkout);
+
+    @POST("api/checkouts/{uid}.json")
+    Single<Status> checkout(@Path("uid") String uid);
 
     //region Bookings
     @PATCH("/api/bookings/{id}/activate")

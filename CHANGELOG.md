@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [TT-5280] Add support for checkout status
+* [TT-5541] Fix build on travis
 
 ## 0.7.0
 

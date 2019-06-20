@@ -52,7 +52,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
-    implementation 'net.danlew:android.joda:2.9.5'
+    implementation 'net.danlew:android.joda:2.10.1.2'
     testCompile 'joda-time:joda-time:2.10.2'
     testCompile 'junit:junit:4.12'
     testCompile 'com.squareup.okhttp3:mockwebserver:3.14.2'

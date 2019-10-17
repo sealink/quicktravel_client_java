@@ -4,6 +4,7 @@
 
 * [TT-5280] Add support for checkout status
 * [TT-5541] Fix build on travis
+* [TT-6189] Add timetable from_route_stop_id and to_route_stop_id
 
 ## 0.7.0
 

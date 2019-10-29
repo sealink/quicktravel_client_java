@@ -14,6 +14,14 @@ public class Departure {
     @Expose
     int tripId;
 
+    @SerializedName("from_route_stop_id")
+    @Expose
+    int fromRouteStopId;
+
+    @SerializedName("to_route_stop_id")
+    @Expose
+    int toRouteStopId;
+
     @SerializedName("state")
     @Expose
     String state;
@@ -58,6 +66,21 @@ public class Departure {
     public void setDepartsAt(Date departsAt) {
         this.departsAt = departsAt;
     }
-    //endregion
 
+    public int getFromRouteStopId() {
+        return this.fromRouteStopId;
+    }
+
+    public void setFromRouteStopId(int fromRouteStopId) {
+        this.fromRouteStopId = fromRouteStopId;
+    }
+
+    public int getToRouteStopId() {
+        return this.toRouteStopId;
+    }
+
+    public void setToRouteStopId(int toRouteStopId) {
+        this.toRouteStopId = toRouteStopId;
+    }
+    //endregion
 }

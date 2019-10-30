@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.8.0
 
 * [TT-5280] Add support for checkout status
 * [TT-5541] Fix build on travis

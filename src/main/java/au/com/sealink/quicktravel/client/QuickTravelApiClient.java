@@ -133,4 +133,7 @@ public interface QuickTravelApiClient {
 
     @POST("/api/on_account_clients")
     Completable createOnAccountClient(@Body OnAccountClient client);
+
+    @GET("/api/vessels.json")
+    Single<List<Vessel>> getVessels();
 }

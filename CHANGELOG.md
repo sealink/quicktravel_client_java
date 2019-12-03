@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## 0.8.1 Unreleased
+
+* [TT-6453] Add support for api/vessels endpoint
+
 ## 0.8.0
 
 * [TT-5280] Add support for checkout status

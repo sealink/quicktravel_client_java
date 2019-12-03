@@ -6,8 +6,6 @@ import au.com.sealink.quicktravel.client.helpers.FixtureHelper;
 import com.google.gson.Gson;
 import org.junit.Test;
 
-
-
 public class VehicleTypeTest {
     private void assertData(VehicleType actual) {
         assertEquals(1, actual.getId());

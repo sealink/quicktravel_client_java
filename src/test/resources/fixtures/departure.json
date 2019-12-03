@@ -1,6 +1,7 @@
 {
   "id": 7990793,
   "trip_id": 1,
+  "vessel_id": 1,
   "from_route_stop_id": 2,
   "to_route_stop_id": 3,
   "state": "active",

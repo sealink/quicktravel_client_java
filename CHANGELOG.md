@@ -3,6 +3,7 @@
 ## 0.8.1 Unreleased
 
 * [TT-6453] Add support for api/vessels endpoint
+* [TT-6473] Add departures `vessel_id` attribute
 
 ## 0.8.0
 

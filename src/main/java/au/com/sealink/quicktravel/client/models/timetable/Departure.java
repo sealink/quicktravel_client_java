@@ -22,6 +22,10 @@ public class Departure {
     @Expose
     int toRouteStopId;
 
+    @SerializedName("vessel_id")
+    @Expose
+    int vesselId;
+
     @SerializedName("state")
     @Expose
     String state;
@@ -41,6 +45,14 @@ public class Departure {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getVesselIdId() {
+        return vesselId;
+    }
+
+    public void setVesselId(int vesselId) {
+        this.vesselId = vesselId;
     }
 
     public int getTripId() {

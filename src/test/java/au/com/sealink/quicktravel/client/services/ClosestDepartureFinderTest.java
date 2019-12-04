@@ -6,19 +6,37 @@ import au.com.sealink.quicktravel.client.models.timetable.Route;
 import java.time.Instant;
 import java.util.Date;
 
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ClosestDepartureFinderTest {
 
     private static Departure departureA =
-            new Departure(DateHelper.parseIso("2018-06-14T09:00:00+09:30"));
+            ClosestDepartureFinderTest.makeDeparture(
+                    DateHelper.parseIso("2018-06-14T09:00:00+09:30"), 1);
+
     private static Departure departureB =
-            new Departure(DateHelper.parseIso("2018-06-14T10:00:00+09:30"));
+            ClosestDepartureFinderTest.makeDeparture(
+                    DateHelper.parseIso("2018-06-14T10:00:00+09:30"), 1);
+
     private static Departure departureC =
-            new Departure(DateHelper.parseIso("2018-06-14T11:00:00+09:30"));
+            ClosestDepartureFinderTest.makeDeparture(
+                    DateHelper.parseIso("2018-06-14T11:00:00+09:30"), 1);
+
     private static Departure departureD =
-            new Departure(DateHelper.parseIso("2018-06-14T12:00:00+09:30"));
+            ClosestDepartureFinderTest.makeDeparture(
+                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 2);
+
+    private static Departure departureE =
+            ClosestDepartureFinderTest.makeDeparture(
+                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 3);
+
+    private static Departure makeDeparture(Date time, int vesselId) {
+        Departure departure = new Departure(time);
+        departure.setVesselId(vesselId);
+        return departure;
+    }
 
     private Route testRoute() {
         Route r = new Route();
@@ -26,6 +44,7 @@ public class ClosestDepartureFinderTest {
         r.getDepartures().add(departureB);
         r.getDepartures().add(departureC);
         r.getDepartures().add(departureD);
+        r.getDepartures().add(departureE);
         return r;
     }
 
@@ -66,5 +85,21 @@ public class ClosestDepartureFinderTest {
         Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
         Departure match = DepartureFinder.closest(route, target);
         Assert.assertSame(departureC, match);
+    }
+
+    @Test
+    public void whenSpecificVessel() {
+        Route route = testRoute();
+        Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
+        Departure match = DepartureFinder.closest(route, target, 2);
+        Assert.assertSame(departureD, match);
+
+        //Try Same time different vessel
+        match = DepartureFinder.closest(route, target, 1);
+        Assert.assertSame(departureC, match);
+
+        //Try Same time different vessel
+        match = DepartureFinder.closest(route, target, 3);
+        Assert.assertSame(departureE, match);
     }
 }

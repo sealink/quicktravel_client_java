@@ -1,9 +1,9 @@
 ### QuickTravel Client Java
 
-## 0.8.1 Unreleased
+## 0.8.1
 
 * [TT-6453] Add support for api/vessels endpoint
-* [TT-6473] Add departures `vessel_id` attribute
+* [TT-6473] Add ability to find closest departure by `vessel_id`
 
 ## 0.8.0
 

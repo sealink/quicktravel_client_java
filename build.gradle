@@ -51,7 +51,7 @@ repositories {
 dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:retrofit:2.7.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
     implementation 'net.danlew:android.joda:2.10.3'
     testCompile 'joda-time:joda-time:2.10.5'
     testCompile 'junit:junit:4.12'

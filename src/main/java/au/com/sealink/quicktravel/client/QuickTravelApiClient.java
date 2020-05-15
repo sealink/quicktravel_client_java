@@ -4,7 +4,6 @@ import au.com.sealink.quicktravel.client.models.*;
 import au.com.sealink.quicktravel.client.models.checkout.Checkout;
 import au.com.sealink.quicktravel.client.models.checkout.CheckoutResponse;
 import au.com.sealink.quicktravel.client.models.checkout.Status;
-import au.com.sealink.quicktravel.client.models.createParty.Party;
 import au.com.sealink.quicktravel.client.models.reservationFor.core.Product;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Create;
 import au.com.sealink.quicktravel.client.models.reservationFor.scheduledTrip.Search;
@@ -87,6 +86,11 @@ public interface QuickTravelApiClient {
 
     @POST("reservation_for/scheduled_trips")
     Single<Booking> reservationFor(@Body Create create);
+
+    @GET("api/checkouts/client_token")
+    Single<String> getClientToken(
+            @Query("customer_id") String customerId
+    );
 
     @POST("api/checkouts")
     Single<CheckoutResponse> checkout(@Body Checkout checkout);

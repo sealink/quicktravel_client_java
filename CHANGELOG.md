@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-7276] Add support for api/client_token endpoint
+
 ## 0.8.1
 
 * [TT-6453] Add support for api/vessels endpoint

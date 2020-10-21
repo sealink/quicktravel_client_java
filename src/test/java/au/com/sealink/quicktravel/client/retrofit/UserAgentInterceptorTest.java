@@ -31,4 +31,24 @@ public class UserAgentInterceptorTest {
 
         mockWebServer.shutdown();
     }
+
+    @Test
+    public void testWithDefaitUserAgent() throws Exception {
+        MockWebServer mockWebServer = new MockWebServer();
+        mockWebServer.enqueue(new MockResponse().setBody("hello, world"));
+        mockWebServer.start();
+
+        UserAgentInterceptor interceptor = new UserAgentInterceptor();
+
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json"), "{}");
+        Request request = new Request.Builder().url(mockWebServer.url("/")).post(body).build();
+        okHttpClient.newCall(request).execute();
+
+        RecordedRequest recordedRequest = mockWebServer.takeRequest();
+        Assert.assertEquals("quicktravel_client-java/1.0.0-TEST", recordedRequest.getHeader("User-Agent"));
+
+        mockWebServer.shutdown();
+    }
 }

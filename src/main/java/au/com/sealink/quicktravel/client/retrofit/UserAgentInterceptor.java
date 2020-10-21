@@ -1,12 +1,15 @@
 package au.com.sealink.quicktravel.client.retrofit;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;
 
 public class UserAgentInterceptor implements Interceptor {
-    private volatile String userAgent;
+    private ResourceBundle bundle = ResourceBundle.getBundle("version");
+
+    private volatile String userAgent = "quicktravel_client-java/" + bundle.getString("version");
 
     public void setUserAgent(String userAgent) {
         this.userAgent = userAgent;

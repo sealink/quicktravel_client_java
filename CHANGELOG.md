@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## Unreleased
+## 0.9.0
 
 * [TT-7276] Add support for api/client_token endpoint
 * [TT-8144] Add interceptor to allow clients to easily set user agent

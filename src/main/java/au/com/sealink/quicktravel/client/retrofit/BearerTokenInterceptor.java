@@ -5,8 +5,7 @@ import java.io.IOException;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 
-@Deprecated
-public class TokenInterceptor implements Interceptor {
+public class BearerTokenInterceptor implements Interceptor {
     private volatile String token;
 
     public void setToken(String token) {
@@ -16,13 +15,11 @@ public class TokenInterceptor implements Interceptor {
     @Override
     public okhttp3.Response intercept(okhttp3.Interceptor.Chain chain) throws IOException {
         Request request = chain.request();
-        if (!request.method().equals("GET")) {
-            String token = this.token;
-            if (token != null) {
-                request = request.newBuilder()
-                        .addHeader("X-CSRF-Token", token)
-                        .build();
-            }
+        String token = this.token;
+        if (token != null) {
+            request = request.newBuilder()
+                    .addHeader("Authorization", "Bearer " + token)
+                    .build();
         }
         return chain.proceed(request);
     }

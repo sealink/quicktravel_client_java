@@ -102,4 +102,12 @@ public class ClosestDepartureFinderTest {
         match = DepartureFinder.closest(route, target, 3);
         Assert.assertSame(departureE, match);
     }
+
+    @Test
+    public void whenNoSpecificVesselFound() {
+        Route route = testRoute();
+        Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
+        Departure match = DepartureFinder.closest(route, target, 10);
+        Assert.assertNull(match);
+    }
 }

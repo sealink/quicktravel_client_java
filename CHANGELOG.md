@@ -1,5 +1,10 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-8252] Fix index out of bounds error when no vessel matches a departure
+* [TT-8224] Add Auth API support
+
 ## 0.9.0
 
 * [TT-7276] Add support for api/client_token endpoint

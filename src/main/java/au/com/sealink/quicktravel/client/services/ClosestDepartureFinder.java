@@ -33,6 +33,10 @@ public class ClosestDepartureFinder {
             }
         }
 
+        if (departures.size() == 0) {
+            return null;
+        }
+
         Collections.sort(departures, (o1, o2) -> {
                     long t1 = new Duration(new DateTime(o1.getDepartsAt()), targetDate).getMillis();
                     long t2 = new Duration(new DateTime(o2.getDepartsAt()), targetDate).getMillis();

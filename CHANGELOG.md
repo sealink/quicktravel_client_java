@@ -1,5 +1,10 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [TT-8261] Add masterpoint resource to barcode resource
+* [TT-8261] Add resource_id to timetable
+
 ## 0.9.0
 
 * [TT-7276] Add support for api/client_token endpoint

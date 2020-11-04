@@ -24,6 +24,13 @@ public class ReservationTicketTest {
     }
 
     @Test
+    public void withMasterPoint() {
+        String json = FixtureHelper.fromFile("fixtures/reservation_barcode_with_masterpoint.json");
+        ReservationTicket actual = new Gson().fromJson(json, ReservationTicket.class);
+        assertEquals(1, actual.getResource().getMasterpointResourceId());
+    }
+
+    @Test
     public void fromJson() {
         String json = FixtureHelper.fromFile("fixtures/reservation_barcode.json");
         ReservationTicket actual = new Gson().fromJson(json, ReservationTicket.class);
@@ -37,6 +44,7 @@ public class ReservationTicketTest {
 
         assertEquals(2, actual.getResource().getId());
         assertEquals("Rottnest Island", actual.getResource().getName());
+        assertEquals(0, actual.getResource().getMasterpointResourceId());
 
         assertEquals(2, (int)actual.getPassengers().get("Ad"));
         assertEquals(3, (int)actual.getPassengers().get("Ch"));

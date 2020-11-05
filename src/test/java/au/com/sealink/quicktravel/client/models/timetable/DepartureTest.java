@@ -35,6 +35,7 @@ public class DepartureTest {
         actual.setFromRouteStopId(2);
         actual.setToRouteStopId(3);
         actual.setVesselId(1);
+        actual.setResourceId(2);
         actual.setDepartsAt(DateHelper.parseIso("2018-06-14T09:00:00+09:30"));
         assertData(actual);
     }

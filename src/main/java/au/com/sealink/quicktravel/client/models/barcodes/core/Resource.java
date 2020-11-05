@@ -10,6 +10,9 @@ public class Resource {
     @SerializedName("name")
     @Expose
     private String name;
+    @SerializedName("masterpoint_resource_id")
+    @Expose
+    private int masterpointResourceId;
 
     //region GETTER/SETTERS
     public int getId() {
@@ -26,6 +29,14 @@ public class Resource {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getMasterpointResourceId() {
+        return masterpointResourceId;
+    }
+
+    public void setMasterpointResourceId(int id) {
+        this.masterpointResourceId = id;
     }
     //endregion
 }

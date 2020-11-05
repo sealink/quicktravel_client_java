@@ -15,6 +15,7 @@ public class DepartureTest {
         assertEquals(2, actual.getFromRouteStopId());
         assertEquals(3, actual.getToRouteStopId());
         assertEquals(1, actual.getVesselId());
+        assertEquals(2, actual.getResourceId());
         assertEquals(DateHelper.parseIso("2018-06-14T09:00:00+09:30"), actual.getDepartsAt());
     }
 
@@ -34,6 +35,7 @@ public class DepartureTest {
         actual.setFromRouteStopId(2);
         actual.setToRouteStopId(3);
         actual.setVesselId(1);
+        actual.setResourceId(2);
         actual.setDepartsAt(DateHelper.parseIso("2018-06-14T09:00:00+09:30"));
         assertData(actual);
     }

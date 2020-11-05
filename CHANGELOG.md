@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* [TT-8261] Add masterpoint resource to barcode resource
+* [TT-8261] Add resource_id to timetable
 * [TT-8252] Fix index out of bounds error when no vessel matches a departure
 * [TT-8224] Add Auth API support
 

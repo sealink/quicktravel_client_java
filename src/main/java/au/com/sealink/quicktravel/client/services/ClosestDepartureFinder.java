@@ -14,11 +14,21 @@ public class ClosestDepartureFinder {
     private Route route;
     private DateTime targetDate;
     private Integer vesselId;
+    private Integer resourceId;
 
-    ClosestDepartureFinder(Route route, Date targetDate, Integer vesselId) {
+    ClosestDepartureFinder(Route route, Date targetDate, Integer vesselId, Integer resourceId) {
         this.route = route;
         this.targetDate = new DateTime(targetDate);
         this.vesselId = vesselId;
+        this.resourceId = resourceId;
+    }
+
+    private boolean matchVessel(Integer vesselId) {
+        return this.vesselId == null || vesselId.equals(this.vesselId);
+    }
+
+    private boolean matchResource(Integer resourceId) {
+        return this.resourceId == null || resourceId.equals(this.resourceId);
     }
 
     public Departure find() {
@@ -28,7 +38,7 @@ public class ClosestDepartureFinder {
 
         List<Departure> departures = new ArrayList<>();
         for (Departure d : route.getDepartures()) {
-            if (this.vesselId == null || d.getVesselId() == vesselId) {
+            if (matchResource(d.getResourceId()) && matchVessel(d.getVesselId())) {
                 departures.add(d);
             }
         }

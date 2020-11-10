@@ -1,6 +1,10 @@
 ### QuickTravel Client Java
 
-## 0.10.1 Unreleased
+## 0.10.2 Unreleased
+
+* [TT-8303] Add support for matching resource id in closest departure finder
+
+## 0.10.1
 
 * [TT-8250] Add masterpoint_resource_id field to resource
 

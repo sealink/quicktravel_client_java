@@ -13,6 +13,9 @@ public class Resource {
     @SerializedName("resource_category_id")
     @Expose
     private int resourceCategoryId;
+    @SerializedName("masterpoint_resource_id")
+    @Expose
+    private int masterpointResourceId;
 
     //region GETTER/SETTERS
     public int getId() {
@@ -37,6 +40,14 @@ public class Resource {
 
     public void setResourceCategoryId(int id) {
         this.resourceCategoryId = id;
+    }
+
+    public int getMasterpointResourceId() {
+      return this.masterpointResourceId;
+    }
+
+    public void setMasterpointResourceId(int id) {
+      this.masterpointResourceId = id;
     }
     //endregion
 }

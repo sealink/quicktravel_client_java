@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## 0.10.1 Unreleased
+## 0.10.1
 
 * [TT-8250] Add masterpoint_resource_id field to resource
 

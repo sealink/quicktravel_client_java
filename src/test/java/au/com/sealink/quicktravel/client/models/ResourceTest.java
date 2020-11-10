@@ -11,6 +11,7 @@ public class ResourceTest {
         assertEquals(1, actual.getId());
         assertEquals("Resource 1", actual.getName());
         assertEquals(2, actual.getResourceCategoryId());
+        assertEquals(0, actual.getMasterpointResourceId());
     }
 
     @Test
@@ -26,6 +27,7 @@ public class ResourceTest {
         actual.setId(1);
         actual.setName("Resource 1");
         actual.setResourceCategoryId(2);
+        actual.setMasterpointResourceId(0);
         assertData(actual);
     }
 }

@@ -1,5 +1,6 @@
 {
   "id": 1,
   "resource_category_id": 2,
-  "name": "Resource 1"
+  "name": "Resource 1",
+  "masterpoint_resource_id": null
 }

@@ -1,6 +1,6 @@
 ### QuickTravel Client Java
 
-## 0.10.2 Unreleased
+## 0.10.2
 
 * [TT-8303] Add support for matching resource id in closest departure finder
 

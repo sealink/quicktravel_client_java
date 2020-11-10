@@ -14,27 +14,28 @@ public class ClosestDepartureFinderTest {
 
     private static Departure departureA =
             ClosestDepartureFinderTest.makeDeparture(
-                    DateHelper.parseIso("2018-06-14T09:00:00+09:30"), 1);
+                    DateHelper.parseIso("2018-06-14T09:00:00+09:30"), 1, 100);
 
     private static Departure departureB =
             ClosestDepartureFinderTest.makeDeparture(
-                    DateHelper.parseIso("2018-06-14T10:00:00+09:30"), 1);
+                    DateHelper.parseIso("2018-06-14T10:00:00+09:30"), 1, 100);
 
     private static Departure departureC =
             ClosestDepartureFinderTest.makeDeparture(
-                    DateHelper.parseIso("2018-06-14T11:00:00+09:30"), 1);
+                    DateHelper.parseIso("2018-06-14T11:00:00+09:30"), 1, 100);
 
     private static Departure departureD =
             ClosestDepartureFinderTest.makeDeparture(
-                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 2);
+                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 2, 100);
 
     private static Departure departureE =
             ClosestDepartureFinderTest.makeDeparture(
-                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 3);
+                    DateHelper.parseIso("2018-06-14T13:00:00+09:30"), 3, 101);
 
-    private static Departure makeDeparture(Date time, int vesselId) {
+    private static Departure makeDeparture(Date time, int vesselId, int resourceId) {
         Departure departure = new Departure(time);
         departure.setVesselId(vesselId);
+        departure.setResourceId(resourceId);
         return departure;
     }
 
@@ -91,15 +92,15 @@ public class ClosestDepartureFinderTest {
     public void whenSpecificVessel() {
         Route route = testRoute();
         Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
-        Departure match = DepartureFinder.closest(route, target, 2);
+        Departure match = DepartureFinder.closest(route, target, 2, null);
         Assert.assertSame(departureD, match);
 
         //Try Same time different vessel
-        match = DepartureFinder.closest(route, target, 1);
+        match = DepartureFinder.closest(route, target, 1, null);
         Assert.assertSame(departureC, match);
 
         //Try Same time different vessel
-        match = DepartureFinder.closest(route, target, 3);
+        match = DepartureFinder.closest(route, target, 3, null);
         Assert.assertSame(departureE, match);
     }
 
@@ -107,7 +108,26 @@ public class ClosestDepartureFinderTest {
     public void whenNoSpecificVesselFound() {
         Route route = testRoute();
         Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
-        Departure match = DepartureFinder.closest(route, target, 10);
+        Departure match = DepartureFinder.closest(route, target, 10, null);
         Assert.assertNull(match);
+    }
+
+    @Test
+    public void whenSpecificResource() {
+        Route route = testRoute();
+        Date target = DateHelper.parseIso("2018-06-14T11:00:00+09:30");
+        Departure match = DepartureFinder.closest(route, target, 2, 100);
+        Assert.assertSame(departureD, match);
+
+        //Try Same time specific vessel
+        match = DepartureFinder.closest(route, target, 1, 100);
+        Assert.assertSame(departureC, match);
+
+        //Try without vessel, specific resource
+        match = DepartureFinder.closest(route, target, null, 101);
+        Assert.assertSame(departureE, match);
+
+        match = DepartureFinder.closest(route, target, null, 101);
+        Assert.assertSame(departureE, match);
     }
 }

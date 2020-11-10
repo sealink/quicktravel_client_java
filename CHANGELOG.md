@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## 0.10.1 Unreleased
+
+* [TT-8250] Add masterpoint_resource_id field to resource
+
 ## 0.10.0
 
 * [TT-8261] Add masterpoint resource to barcode resource

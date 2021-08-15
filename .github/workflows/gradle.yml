@@ -29,8 +29,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Build with Gradle
-      run: gradle build
+    # - name: Build with Gradle
+    #   run: gradle build
 
     - name: Gradle report
       # if: ${{ success() }}

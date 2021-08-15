@@ -110,7 +110,7 @@ publishing {
     }
   repositories {
     maven {
-      name = "quicktravel_client"
+      name = "OSSRH"
       url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
       credentials {
         // username = System.getenv("MAVEN_USERNAME")
@@ -123,8 +123,8 @@ publishing {
 }
 
 bintray {
-    user = System.getenv('BINTRAY_USER')
-    key = System.getenv('BINTRAY_KEY')
+    user = System.getenv('asdf')
+    key = System.getenv('asdf')
 
     publications = ['mavenPublication']
 

@@ -115,8 +115,8 @@ publishing {
       credentials {
         // username = System.getenv("MAVEN_USERNAME")
         // password = System.getenv("MAVEN_PASSWORD")
-        username = 'mark-onenetwork'
-        password = 'l!wxRGxj2vB^2RHUznp'
+        username = 'mark@onenetwork.ai'
+        password = 'Goto2021'
       }
     }
   }

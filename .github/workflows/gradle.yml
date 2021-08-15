@@ -33,7 +33,7 @@ jobs:
       run: ./gradlew jacocoTestReport coveralls
 
     - name: Gradle upload
-      run: ./gradlew bintrayUpload"
+      run: ./gradlew publish"
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle

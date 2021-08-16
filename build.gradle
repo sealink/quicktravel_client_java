@@ -110,13 +110,11 @@ publishing {
     }
   repositories {
     maven {
-      name = "OSSRH"
-      url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+      name = "GitHubPackages"
+      url = "https://maven.pkg.github.com/mark-onenetwork/quicktravel_client_java"
       credentials {
-        // username = System.getenv("MAVEN_USERNAME")
-        // password = System.getenv("MAVEN_PASSWORD")
-        username = 'mark-onenetwork'
-        password = 'l!wxRGxj2vB^2RHUznp'
+        username = System.getenv("GITHUB_ACTOR")
+        password = System.getenv("GITHUB_TOKEN")
       }
     }
   }

@@ -113,7 +113,7 @@ publishing {
       name = "GitHubPackages"
       url = "https://maven.pkg.github.com/mark-onenetwork/quicktravel_client_java"
       credentials {
-        username = System.getenv("GITHUB_ACTOR")
+        username = System.getenv("GITHUB_USERNAME")
         password = System.getenv("GITHUB_TOKEN")
       }
     }

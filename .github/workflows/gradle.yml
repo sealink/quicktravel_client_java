@@ -1,9 +1,9 @@
 name: Gradle Package
 
-on: [push]
-
-#   release:
-#     types: [created]
+on: [push, pull_request]
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:

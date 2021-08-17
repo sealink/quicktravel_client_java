@@ -111,7 +111,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/mark-onenetwork/quicktravel_client_java"
+            url = "https://maven.pkg.github.com/sealink/quicktravel_client_java"
             credentials {
                 username = System.getenv("GITHUB_USERNAME")
                 password = System.getenv("GITHUB_TOKEN")

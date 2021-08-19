@@ -24,7 +24,7 @@ jobs:
         server-id: github
         settings-path: ${{ github.workspace }}
 
-    - name: Display bradle version
+    - name: Display Gradle version
       run: ./gradlew versionDisplay
 
     - name: Build with Gradle

@@ -1,5 +1,9 @@
 ### QuickTravel Client Java
 
+## Unreleased
+
+* [PLAT-27] Update build and packaging to use github
+
 ## 0.10.2
 
 * [TT-8303] Add support for matching resource id in closest departure finder

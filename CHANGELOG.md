@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [PLAT-27] Update build and packaging to use github
+* [PLAT-44] Use visibility_mode in favour of scope parameter
 
 ## 0.10.2
 

@@ -58,7 +58,7 @@ public interface QuickTravelApiClient {
     Single<TimeTable> getDailyTimetable(
             @Query("product_type_id") int productTypeId,
             @Query("date") String date,
-            @Query("scope") String scope
+            @Query("visibility_mode") String scope
     );
 
     @GET("api/product_types")

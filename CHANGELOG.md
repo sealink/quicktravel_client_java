@@ -3,6 +3,7 @@
 ## Unreleased
 
 * [PLAT-27] Update build and packaging to use github
+* [PLAT-27] Trigger workflow by pushing Tag
 
 ## 0.10.2
 

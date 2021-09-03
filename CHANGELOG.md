@@ -4,6 +4,7 @@
 
 * [PLAT-27] Update build and packaging to use github
 * [PLAT-44] Use visibility_mode in favour of scope parameter
+* [PLAT-27] Trigger workflow by pushing Tag
 
 ## 0.10.2
 

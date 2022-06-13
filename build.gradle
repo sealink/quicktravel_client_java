@@ -56,7 +56,7 @@ dependencies {
     implementation 'net.danlew:android.joda:2.10.7.1'
     testCompile 'joda-time:joda-time:2.10.14'
     testCompile 'junit:junit:4.13.2'
-    testCompile 'com.squareup.okhttp3:mockwebserver:4.9.3'
+    testCompile 'com.squareup.okhttp3:mockwebserver:4.10.0'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
